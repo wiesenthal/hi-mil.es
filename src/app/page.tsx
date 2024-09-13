@@ -16,7 +16,7 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col items-start">
           <p className="text-xl">
-            Hello, visitor. You've found my website. For now, this is all there
+            Hello, visitor. You&apos;ve found my website. For now, this is all there
             is.
           </p>
         </div>
