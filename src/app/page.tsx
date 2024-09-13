@@ -2,36 +2,50 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
+    <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-br from-[#d1c4ff] via-zinc-100 to-[#a0ffde] text-black">
+      <div className="container h-2/3 flex-col items-center justify-center space-y-8 p-4 md:p-16">
+        <div className="flex flex-row justify-end">
+          <div className="flex flex-col items-center">
+            <h1 className="bg-gradient-to-tl from-[#5751ff7b] to-[#00eaff7b] bg-clip-text text-5xl font-thin tracking-tight text-transparent sm:text-[5rem]">
+              hi-mil.es
+            </h1>
+            <h1 className="text-5xl font-normal tracking-tight sm:text-[5rem]">
+              hi, miles
+            </h1>
+          </div>
         </div>
+        <div className="flex flex-col items-start">
+          <p className="text-xl">
+            Hello, visitor. You've found my website. For now, this is all there
+            is.
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-row items-center justify-center gap-8 justify-self-end pb-2">
+        <PrettyLink href="https://github.com/wiesenthal">github</PrettyLink>
+        <PrettyLink href="https://www.linkedin.com/in/miles-wiesenthal/">
+          linkedin
+        </PrettyLink>
+        <PrettyLink href="https://x.com/gardening_gnome">twitter</PrettyLink>
       </div>
     </main>
   );
 }
+
+const PrettyLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <Link
+      href={href}
+      className="text-xl text-blue-500 hover:scale-105 hover:text-blue-600 hover:underline"
+      target="_blank"
+    >
+      {children}
+    </Link>
+  );
+};
