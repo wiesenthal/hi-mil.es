@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-br from-[#d1c4ff] via-zinc-100 to-[#a0ffde] text-black">
+    <main className="fixed flex size-full flex-col items-center justify-between bg-gradient-to-br from-[#d1c4ff] via-zinc-100 to-[#a0ffde] text-black">
       <div className="container h-2/3 flex-col items-center justify-center space-y-8 p-4 md:p-16">
         <div className="flex flex-row justify-end">
           <div className="flex flex-col items-center">
@@ -16,8 +16,8 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col items-start">
           <p className="text-xl">
-            Hello, visitor. You&apos;ve found my website. For now, this is all there
-            is.
+            Hello, visitor. You&apos;ve found my website. For now, this is all
+            there is.
           </p>
         </div>
       </div>
