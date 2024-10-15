@@ -30,5 +30,5 @@ export default function VisitCount() {
 function formatOrdinal(num: number) {
   const suffix = ["th", "st", "nd", "rd"] as const;
   const v = num % 100;
-  return num + (suffix[(v - 20) % 10] || suffix[v] || suffix[0]);
+  return num + (suffix[(v - 20) % 10] ?? suffix[v] ?? suffix[0]);
 }

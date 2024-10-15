@@ -22,7 +22,7 @@ function useValue() {
     name: undefined,
   });
 
-  useEffectOnce(() => visit().then(setState));
+  useEffectOnce(() => (visit().then(setState), undefined));
 
   return state;
 }

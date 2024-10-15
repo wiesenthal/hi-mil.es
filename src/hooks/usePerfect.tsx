@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, MutableRefObject } from "react";
+import { useState, useRef, useEffect, type MutableRefObject } from "react";
 
 const isFunction = <T,>(
   value: T | ((prevState: T) => T),

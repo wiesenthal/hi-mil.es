@@ -4,7 +4,7 @@ import { cookies, headers } from "next/headers";
 import { setCookie, getCookie } from "cookies-next";
 import { db } from "~/db";
 import { users, visits } from "~/db/schema";
-import { User } from "~/db/types";
+import type { User } from "~/db/types";
 import { eq } from "drizzle-orm";
 
 const userIdCookie = "hi-miles-userId";
