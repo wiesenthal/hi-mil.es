@@ -22,7 +22,8 @@ export async function visit() {
     ? forwardedFor.split(",")[0]?.trim()
     : headers().get("x-real-ip")?.trim();
 
-  console.log(`ip: ${ip}, userId: ${userId}`);
+  const url = headers().get("referer");
+  console.log(`url: ${url}`);
 
   let user: User | undefined;
   if (userId)
@@ -38,6 +39,7 @@ export async function visit() {
     .values({
       userId: user.id,
       ip,
+      url,
     })
     .returning();
 

@@ -18,8 +18,9 @@ export const visits = pgTable(
   "visits",
   {
     userId: integer("user_id").references(() => users.id),
-    id: integer("visit_number").notNull(),
+    id: integer("visit_number").notNull().default(1),
     ip: text("ip"),
+    url: text("url"),
     createdAt: timestamp("created_at").default(sql`now()`),
   },
   (table) => ({
