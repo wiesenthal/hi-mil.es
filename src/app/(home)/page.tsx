@@ -1,8 +1,9 @@
 import Link from "next/link";
+import VisitCount from "./components/VisitCount";
 
 export default function HomePage() {
   return (
-    <main className="fixed flex size-full flex-col items-center justify-between bg-gradient-to-br from-[#d1c4ff] via-zinc-100 to-[#a0ffde] text-black">
+    <main className="fixed flex size-full flex-col items-center justify-between">
       <div className="container h-2/3 flex-col items-center justify-center space-y-8 p-4 md:p-16">
         <div className="flex flex-row justify-end">
           <div className="flex flex-col items-center">
@@ -27,6 +28,9 @@ export default function HomePage() {
           linkedin
         </PrettyLink>
         <PrettyLink href="https://x.com/gardening_gnome">twitter</PrettyLink>
+      </div>
+      <div className="absolute bottom-0 right-0">
+        <VisitCount />
       </div>
     </main>
   );
