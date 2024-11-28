@@ -220,7 +220,7 @@ export default function Page() {
         not saying that I&apos;m not saying it and I&apos;m not saying it. You
         get what I mean? No? Well good, because there&apos;s nothing to it.
       </span>
-      <img src="/images/elephant.jpg" alt="elephant" width="100%"></img>
+      <img src="/images/elephant.jpg" alt="elephant" width="100%"></img> 
     </div>
   );
 }
