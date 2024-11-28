@@ -26,7 +26,7 @@ export default function HomePage() {
         <PrettyLink href="https://substack.com/@milessmiles">
           substack
         </PrettyLink>
-        <PrettyLink href="https://github.com/wiesenthal">github</PrettyLink>
+        <PrettyLink href="https://github.com/wiesenthal/hi-mil.es">github</PrettyLink>
         <PrettyLink href="https://www.linkedin.com/in/miles-wiesenthal/">
           linkedin
         </PrettyLink>
