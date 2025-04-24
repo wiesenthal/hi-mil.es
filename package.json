@@ -19,7 +19,9 @@
     "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.3",
+    "react-markdown": "^10.1.0",
+    "rehype-starry-night": "^2.2.0",
+    "remark-gfm": "^4.0.1",
     "zod": "^3.23.3"
   },
   "devDependencies": {
