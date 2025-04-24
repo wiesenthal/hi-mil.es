@@ -13,6 +13,9 @@ const config = {
     });
     return config;
   },
+  experimental: {
+    serverComponentsExternalPackages: ['vscode-oniguruma', '@wooorm/starry-night']
+  }
 };
 
 export default config;
