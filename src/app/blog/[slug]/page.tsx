@@ -12,8 +12,8 @@ export default async function Blog({ params }: { params: { slug: string } }) {
     const { content, createdAt, updatedAt } = await readBlog(params.slug);
 
     return (
-      <div className="size-full overflow-y-auto p-4">
-        <div className="mx-auto flex h-full max-w-4xl flex-col">
+      <div className="flex size-full flex-col overflow-y-auto p-4">
+        <div className="mx-auto flex w-full max-w-5xl flex-grow flex-col">
           <div className="markdown prose prose-invert lg:prose-xl max-w-none">
             <ReactMarkdown
               components={{
@@ -41,7 +41,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
           </div>
           <div className="flex-grow" />
           <div className="flex flex-row items-center justify-between gap-2">
-            <p className="text-sm text-gray-500">
+            <p className="flex-grow flex-1 text-sm text-gray-500">
               Created at:{" "}
               {createdAt.toLocaleDateString("en-US", {
                 year: "numeric",
@@ -53,7 +53,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             <NavLink href="/blog" target="_self">
               Back
             </NavLink>
-            <p className="text-sm text-gray-500">
+            <p className="flex-grow flex-1 text-right text-sm text-gray-500">
               Updated at:{" "}
               {updatedAt.toLocaleDateString("en-US", {
                 year: "numeric",

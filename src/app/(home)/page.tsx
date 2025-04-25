@@ -23,12 +23,12 @@ export default function HomePage() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col flex-grow pt-60">
+      <div className="flex flex-grow flex-col pt-60">
         <NavLink href="/blog" target="_self">
           Check out my Blogs!
         </NavLink>
       </div>
-      <div className="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-2 justify-self-end pb-2 lg:grid-cols-4">
+      <div className="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-2 justify-self-end pb-4 lg:grid-cols-4">
         <PrettyLink href="https://substack.com/@milessmiles">
           substack
         </PrettyLink>
