@@ -7,7 +7,7 @@ export default async function BlogList() {
 
   return (
     <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
-      <h1 className="text-4xl font-bold my-5">Blogs</h1>
+      <h1 className="my-5 text-4xl font-bold">Blogs</h1>
       <ul className="flex flex-col gap-2">
         {blogs.map((blog) => (
           <li
@@ -22,7 +22,12 @@ export default async function BlogList() {
               {blog.slug}
             </PrettyLink>
             <p className="text-sm text-gray-500">
-              {blog.createdAt.toLocaleDateString()}
+              {blog.createdAt.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                timeZone: "UTC",
+              })}
             </p>
           </li>
         ))}

@@ -1,3 +1,8 @@
+---
+createdAt: "2025-01-07"
+updatedAt: "2025-01-07"
+---
+
 # Satisfied
 
 I laid down today on a brick wall.

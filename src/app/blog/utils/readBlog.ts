@@ -1,11 +1,14 @@
 import { promises as fs } from "fs";
 import path from "path";
+import matter from "gray-matter"; // Import gray-matter
 
 export async function readFile(filePath: string) {
-  const content = await fs.readFile(filePath, "utf8");
-  const stats = await fs.stat(filePath);
-  const updatedAt = stats.mtime;
-  const createdAt = stats.birthtime;
+  const rawContent = await fs.readFile(filePath, "utf8");
+  const { data, content } = matter(rawContent);
+
+  // consider that these will be in format YYYY-MM-DD
+  const createdAt = data.createdAt ? new Date(data.createdAt) : new Date();
+  const updatedAt = data.updatedAt ? new Date(data.updatedAt) : new Date();
 
   return {
     content,
