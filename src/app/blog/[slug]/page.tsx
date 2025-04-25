@@ -40,8 +40,8 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             </ReactMarkdown>
           </div>
           <div className="flex-grow" />
-          <div className="flex flex-row items-center justify-between gap-2">
-            <p className="flex-1 flex-grow text-sm text-gray-500">
+          <div className="flex flex-row items-center justify-between gap-2 max-md:justify-center">
+            <p className="flex-1 flex-grow text-sm text-gray-500 max-md:hidden">
               Created at:{" "}
               {createdAt.toLocaleDateString("en-US", {
                 year: "numeric",
@@ -53,7 +53,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             <NavLink href="/blog" target="_self">
               Back
             </NavLink>
-            <p className="flex-1 flex-grow text-right text-sm text-gray-500">
+            <p className="flex-1 flex-grow text-right text-sm text-gray-500 max-md:hidden">
               Updated at:{" "}
               {updatedAt.toLocaleDateString("en-US", {
                 year: "numeric",
