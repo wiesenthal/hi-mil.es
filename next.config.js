@@ -11,11 +11,18 @@ const config = {
       test: /\.md$/,
       use: "raw-loader",
     });
+
+    config.experiments = {
+      ...config.experiments,
+      asyncWebAssembly: true,
+    }
+
     return config;
   },
   experimental: {
-    serverComponentsExternalPackages: ['vscode-oniguruma', '@wooorm/starry-night']
-  }
+    serverComponentsExternalPackages: ['vscode-oniguruma', '@wooorm/starry-night'],
+    esmExternals: 'loose'
+  },
 };
 
 export default config;
