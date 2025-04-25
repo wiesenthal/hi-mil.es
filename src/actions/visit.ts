@@ -23,7 +23,6 @@ export async function visit() {
     : headers().get("x-real-ip")?.trim();
 
   const url = headers().get("referer");
-  console.log(`url: ${url}`);
 
   let user: User | undefined;
   if (userId)

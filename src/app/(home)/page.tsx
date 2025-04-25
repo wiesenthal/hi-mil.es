@@ -25,7 +25,7 @@ export default function HomePage() {
       </div>
       <div className="flex flex-col flex-grow pt-60">
         <NavLink href="/blog" target="_self">
-          New! Check out my Blogs!
+          Check out my Blogs!
         </NavLink>
       </div>
       <div className="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-2 justify-self-end pb-2 lg:grid-cols-4">
