@@ -2,6 +2,8 @@ import { redirect } from "next/navigation";
 import { readBlog } from "../utils/readBlog";
 import ReactMarkdown from "react-markdown";
 import { NavLink } from "~/app/components/NavLink";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const dynamic = "force-static";
 
@@ -12,8 +14,30 @@ export default async function Blog({ params }: { params: { slug: string } }) {
     return (
       <div className="size-full overflow-y-auto p-4">
         <div className="mx-auto flex max-w-4xl flex-col">
-          <div className="markdown">
-            <ReactMarkdown>{content}</ReactMarkdown>
+          <div className="markdown prose prose-invert lg:prose-xl max-w-none">
+            <ReactMarkdown
+              components={{
+                code(props) {
+                  const { children, className, node, ...rest } = props;
+                  const match = /language-(\w+)/.exec(className || "");
+                  return match ? (
+                    <SyntaxHighlighter
+                      PreTag="div"
+                      language={match[1]}
+                      style={oneLight}
+                    >
+                      {String(children).replace(/\n$/, "")}
+                    </SyntaxHighlighter>
+                  ) : (
+                    <code {...rest} className={className}>
+                      {children}
+                    </code>
+                  );
+                },
+              }}
+            >
+              {content}
+            </ReactMarkdown>
           </div>
           <div className="flex-grow" />
           <div className="flex flex-row items-center justify-between gap-2">
@@ -31,6 +55,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
       </div>
     );
   } catch (error) {
+    console.error("Error loading blog post:", error);
     return redirect("/blog");
   }
 }

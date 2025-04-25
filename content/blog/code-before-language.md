@@ -10,7 +10,7 @@ For example:
 
 ### Do Not
 
-```js
+```ts
 // User wants to create an avatar with a unique name
 // client has to handle retries
 let name = "bob"
@@ -48,7 +48,7 @@ function deleteAvatar(name: string) {
 
 ### Do
 
-```js
+```ts
 // User wants to create an avatar with a unique name
 // client
 server.createAvatar(name="bob");
