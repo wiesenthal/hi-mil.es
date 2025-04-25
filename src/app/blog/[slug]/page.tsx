@@ -19,7 +19,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
               components={{
                 code(props) {
                   const { children, className, node, ...rest } = props;
-                  const match = /language-(\w+)/.exec(className || "");
+                  const match = /language-(\w+)/.exec(className ?? "");
                   return match ? (
                     <SyntaxHighlighter
                       PreTag="div"
