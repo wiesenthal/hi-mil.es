@@ -18,7 +18,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             <ReactMarkdown
               components={{
                 code(props) {
-                  const { children, className, node, ...rest } = props;
+                  const { children, className, ...rest } = props;
                   const match = /language-(\w+)/.exec(className ?? "");
                   return match ? (
                     <SyntaxHighlighter
@@ -41,7 +41,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
           </div>
           <div className="flex-grow" />
           <div className="flex flex-row items-center justify-between gap-2">
-            <p className="flex-grow flex-1 text-sm text-gray-500">
+            <p className="flex-1 flex-grow text-sm text-gray-500">
               Created at:{" "}
               {createdAt.toLocaleDateString("en-US", {
                 year: "numeric",
@@ -53,7 +53,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             <NavLink href="/blog" target="_self">
               Back
             </NavLink>
-            <p className="flex-grow flex-1 text-right text-sm text-gray-500">
+            <p className="flex-1 flex-grow text-right text-sm text-gray-500">
               Updated at:{" "}
               {updatedAt.toLocaleDateString("en-US", {
                 year: "numeric",

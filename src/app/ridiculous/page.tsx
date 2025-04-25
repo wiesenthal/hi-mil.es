@@ -7,6 +7,7 @@ export default function Page() {
   const { state, setState, onTransition, is } = usePerfect(0);
   const { state: debug, setState: setDebug } = usePerfect<boolean | string>("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(
     onTransition((nextState, previousState) =>
       setDebug(`${previousState} -> ${nextState}`),

@@ -6,9 +6,12 @@ export async function readFile(filePath: string) {
   const rawContent = await fs.readFile(filePath, "utf8");
   const { data, content } = matter(rawContent);
 
-  // consider that these will be in format YYYY-MM-DD
-  const createdAt = data.createdAt ? new Date(data.createdAt) : new Date();
-  const updatedAt = data.updatedAt ? new Date(data.updatedAt) : new Date();
+  const createdAt = data.createdAt
+    ? new Date(data.createdAt as string)
+    : new Date();
+  const updatedAt = data.updatedAt
+    ? new Date(data.updatedAt as string)
+    : new Date();
 
   return {
     content,
