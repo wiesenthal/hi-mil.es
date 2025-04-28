@@ -100,7 +100,7 @@ export default function UserInput() {
 
   function handleInputKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (event.key === "Escape") hide();
-    if (event.key === "Enter" && !event.shiftKey) submit();
+    if (event.key === "Enter" && !event.shiftKey) void submit();
   }
 
   useLayoutEffect(() => {
