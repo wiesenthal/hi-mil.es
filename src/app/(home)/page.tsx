@@ -1,6 +1,7 @@
 import VisitCount from "~/app/components/VisitCount";
 import { PrettyLink } from "~/app/components/PrettyLink";
 import { NavLink } from "~/app/components/NavLink";
+import UserInput from "./components/UserInput";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,9 @@ export default function HomePage() {
             Hello, visitor. You&apos;ve found my website. For now, this is all
             there is.
           </p>
+        </div>
+        <div className="flex flex-col items-end">
+          <UserInput />
         </div>
       </div>
       <div className="flex flex-grow flex-col pt-60">

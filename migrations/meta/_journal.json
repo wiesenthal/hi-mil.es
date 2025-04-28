@@ -15,6 +15,13 @@
       "when": 1729017236059,
       "tag": "0001_premium_peter_quill",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1745865797383,
+      "tag": "0002_bouncy_talos",
+      "breakpoints": true
     }
   ]
 }
