@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className="container flex-col items-center justify-center space-y-8 p-4 md:p-16">
         <div className="flex flex-row justify-end">
           <div className="flex flex-col items-center">
-            <h1 className="bg-gradient-to-tl from-[#5751ff7b] to-[#00eaff7b] bg-clip-text text-5xl font-thin tracking-tight text-transparent sm:text-[5rem]">
+            <h1 className="bg-gradient-to-tl from-[#5751ff] to-[#00eaff7b] bg-clip-text text-5xl font-thin tracking-tight text-transparent sm:text-[5rem]">
               hi-mil.es
             </h1>
             <h1 className="text-5xl font-normal tracking-tight sm:text-[5rem]">

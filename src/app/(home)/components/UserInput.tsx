@@ -118,7 +118,7 @@ export default function UserInput() {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleInputKeyDown}
-          className="disabled:animate-shimmer w-full resize-none rounded bg-transparent bg-gradient-to-tl from-[#5751ff7b] to-[#00eaff7b] bg-clip-text font-serif text-xl font-thin text-transparent focus:outline-none disabled:cursor-not-allowed"
+          className="disabled:animate-shimmer w-full resize-none rounded bg-transparent bg-gradient-to-tl from-[#5751ff] to-[#00eaff] bg-clip-text font-serif text-xl font-thin text-transparent focus:outline-none disabled:cursor-not-allowed"
           placeholder="..."
           disabled={isSubmitting}
         />
