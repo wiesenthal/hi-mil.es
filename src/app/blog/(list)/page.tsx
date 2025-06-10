@@ -1,6 +1,5 @@
 import { listBlogs } from "../utils/listBlogs";
 import { NavLink } from "~/app/components/NavLink";
-import { PrettyLink } from "~/app/components/PrettyLink";
 
 export default async function BlogList() {
   const blogs = await listBlogs();
@@ -9,20 +8,16 @@ export default async function BlogList() {
     <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
       <h1 className="my-5 text-4xl font-bold">Blogs</h1>
       <ul className="flex flex-col gap-2">
-        {blogs.map((blog) => (
+        {blogs.map(({ slug, createdAt }) => (
           <li
-            key={blog.slug}
+            key={slug}
             className="flex flex-row items-center justify-between gap-2"
           >
-            <NavLink
-              href={`/blog/${blog.slug}`}
-              className=""
-              target="_self"
-            >
-              {blog.slug}
+            <NavLink href={`/blog/${slug}`} className="" target="_self">
+              {slug}
             </NavLink>
             <p className="text-sm text-gray-500">
-              {blog.createdAt.toLocaleDateString("en-US", {
+              {createdAt.toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",

@@ -1,24 +1,29 @@
 import { promises as fs } from "fs";
 import path from "path";
 import matter from "gray-matter"; // Import gray-matter
+import { addData } from "~/utils/addKey";
+import { contentDir } from "./constants";
+import { type BlogPost } from "./BlogPost";
 
-export async function readFile(filePath: string) {
+async function readBlogFile(filePath: string) {
   const rawContent = await fs.readFile(filePath, "utf8");
-  const { data, content } = matter(rawContent);
+  const { content, data } = matter(rawContent);
 
-  const createdAt = data.createdAt
-    ? new Date(data.createdAt as string)
-    : new Date();
-  const updatedAt = data.updatedAt
-    ? new Date(data.updatedAt as string)
-    : new Date();
+  console.log(data);
+
+  const createdAt =
+    "createdAt" in data ? new Date(data.createdAt as string) : new Date();
+  const updatedAt =
+    "updatedAt" in data ? new Date(data.updatedAt as string) : new Date();
+  const isComplete = "isComplete" in data ? !!data.isComplete : true;
 
   return {
     content,
     createdAt,
     updatedAt,
+    isComplete,
   };
 }
 
-export const readBlog = (blogSlug: string) =>
-  readFile(path.join(process.cwd(), "content", "blog", `${blogSlug}.md`));
+export const readBlog = (slug: string): Promise<BlogPost> =>
+  readBlogFile(path.join(contentDir, `${slug}.md`)).then(addData({ slug }));

@@ -8,9 +8,13 @@ import { PrettyLink } from "~/app/components/PrettyLink";
 
 export const dynamic = "force-static";
 
-export default async function Blog({ params }: { params: { slug: string } }) {
+export default async function Blog({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
   try {
-    const { content, createdAt, updatedAt } = await readBlog(params.slug);
+    const { content, createdAt, updatedAt } = await readBlog(slug);
 
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
