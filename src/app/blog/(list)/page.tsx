@@ -14,13 +14,13 @@ export default async function BlogList() {
             key={blog.slug}
             className="flex flex-row items-center justify-between gap-2"
           >
-            <PrettyLink
+            <NavLink
               href={`/blog/${blog.slug}`}
-              className="underline"
+              className=""
               target="_self"
             >
               {blog.slug}
-            </PrettyLink>
+            </NavLink>
             <p className="text-sm text-gray-500">
               {blog.createdAt.toLocaleDateString("en-US", {
                 year: "numeric",

@@ -1,20 +1,21 @@
 import Link from "next/link";
+import type { HTMLAttributeAnchorTarget } from "react";
 
 export const PrettyLink = ({
-  href,
+  href = "",
   className,
   children,
   target = "_blank",
 }: {
-  href: string;
+  href?: string;
   className?: string;
   children: React.ReactNode;
-  target?: "_blank" | "_self" | "_parent" | "_top";
+  target?: HTMLAttributeAnchorTarget;
 }) => {
   return (
     <Link
       href={href}
-      className={`text-xl text-blue-500 hover:scale-105 hover:text-blue-600 hover:underline transition-all duration-150 ${className}`}
+      className={`text-[#0000ee] transition-all duration-150 hover:underline ${className}`}
       target={target}
     >
       {children}

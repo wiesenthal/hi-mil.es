@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { NavLink } from "~/app/components/NavLink";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { PrettyLink } from "~/app/components/PrettyLink";
 
 export const dynamic = "force-static";
 
@@ -17,8 +18,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
           <div className="markdown prose prose-invert lg:prose-xl max-w-none">
             <ReactMarkdown
               components={{
-                code(props) {
-                  const { children, className, ...rest } = props;
+                code({ children, className, ...rest }) {
                   const match = /language-(\w+)/.exec(className ?? "");
                   return match ? (
                     <SyntaxHighlighter
@@ -34,6 +34,11 @@ export default async function Blog({ params }: { params: { slug: string } }) {
                     </code>
                   );
                 },
+                a: ({ children, href, target }) => (
+                  <PrettyLink href={href} target={target}>
+                    {children}
+                  </PrettyLink>
+                ),
               }}
             >
               {content}
@@ -51,7 +56,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
               })}
             </p>
             <NavLink href="/blog" target="_self">
-              Back
+              Blogs
             </NavLink>
             <p className="flex-1 flex-grow text-right text-sm text-gray-500 max-md:hidden">
               Updated at:{" "}
