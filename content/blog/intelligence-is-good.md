@@ -5,7 +5,7 @@ updatedAt: "2025-06-11"
 
 # Intelligence is Good
 
-Whether it's artificial doesn't matter.
+Artificial or not, intelligence is good.
 
 There is pervasive fear that the path of humanity's survival becomes narrower as AI becomes more intelligent. We imagine rogue AI's veering off our narrow course of peace and instead dominating the world and subjugating humans. The anxiety grows as AI technology progresses beyond our comprehension, carrying a sense that this doom scenario could spiral off at any moment.
 
