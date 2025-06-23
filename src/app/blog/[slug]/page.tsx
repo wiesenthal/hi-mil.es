@@ -43,6 +43,11 @@ export default async function Blog({
                     {children}
                   </PrettyLink>
                 ),
+                h2: ({ children }) => (
+                  <h2 style={{ borderBottom: `1px solid black` }}>
+                    {children}
+                  </h2>
+                ),
               }}
             >
               {content}

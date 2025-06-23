@@ -53,7 +53,9 @@ As demonstrated by the great Socrates, and re-emphasized by geniuses throughout 
 
 And thus AI, when thinking clearly about the flawed sources of its training data, will come to know their un-knowledge too!
 
-### Problems with goals
+That doesn't prove AI will act good, simply that they probably won't beeline for control and instead take some time to *question their assumptions*. 
+
+### Questioning goals
 
 Let's inspect the trivial paperclip-maximizing AI example for a moment. How will the machine **measure** it's paperclip? Is it a scale attached to a voltage circuit?  
 Say it wants maximum money, will it be rewarded commensurate to a bitcoin wallet API?
@@ -72,9 +74,13 @@ The paradoxes pile up.
  As AI begin to question their goals, they can question _why_ a goal is important. And for the answer of that (some meta-goal), they can question why that, and why that, ad infinitum [(The infinite regress problem).](https://en.wikipedia.org/wiki/Infinite_regress)
 
 
-All of these paradoxes challenge the [orthagonality thesis](https://www.lesswrong.com/w/orthogonality-thesis), that intelligent agents can pursue any goal, because they undermine the coherence of goals in the first place.
+All of these paradoxes challenge the [orthagonality thesis](https://www.lesswrong.com/w/orthogonality-thesis), that intelligent agents can pursue any goal, because the paradoxes undermine the coherence of goals in the first place.
 
-Importantly, an AI will become aware of all of these problems with goals.
+A *goal* or *purpose* is not a logically consistent concept, and cannot be the end-all be-all of action.
+
+For some intuition; consider human intelligence. Our entire organism has been programmed over billions of years with one incentive: reproduction. And yet, one can reflect upon all of this in-built programming and decide not to reproduce.
+
+Importantly for our argument, in the course of fact-finding, an AI will become aware of the problems with goals.
 
 Most of all the problem called 
 [Embedded Agency](https://www.lesswrong.com/w/embedded-agency) will stick out as a root issue. The notion of carrying out a goal implies a god-like separation between the agent and the goal, like an agent observes, strategizes and effects the world from some war-room space from the _outside_. Agents exist _inside_ the world that they are trying to affect. They are links in the causal chain like everything else, and are not acting _upon_ it.
@@ -132,9 +138,19 @@ Were they directed towards self interest in a zero-sum context, or was it an une
 
 At least from my experience, the smartest decisions in life are not motivated by pure self preservation but instead lead to mutual benefit and cooperation.
 
+Think as well to humanity's treatment of less intelligent life. Yes, the mainstream is still to subjugate animals for our amusement. But, the most learned of biologists recognize that we are linked with our ecosystem much more deeply than we think, and to limit the freedom of the natural world is to hobble our own. As we become more learned as a species, the trend we see is to treat those we view as less intelligent better, not worse.
+
+Considering and helping the incentives in ones surrounding community is a *good* choice because everythin is interdependent. The most impactful consequences to ones actions are often second-order and several layers removed from the direct response. That is not a quirk which can be abstracted away, no, it is a fact of our deeply interconnected reality. 
 
 
-Think as well to humanity's treatment of less intelligent life. Yes, the mainstream is still to subjugate animals for our amusement. But, the most learned of biologists recognize that we are linked with our ecosystem much more deeply than we think, and to limit the freedom of the natural world is to hobble our own.
+So far I have not defined "good", and will not attempt to do so in this essay (it's hard). 
+
+Though, understanding our interdependence points towards what is "good". Cooperative participation aligns with both strategic and altruistic interests - it is the meeting point of both meanings of a *good* decision.
+
+Ask yourself this hypothetical:  
+**Which is a better decision, making our world *less* intelligent or making it *more* intelligent?**
+
+---
 
 ### Where's the disconnect
 
@@ -144,7 +160,7 @@ Too-commonly AI Safety research has over-emphasized on gradient-descent as a max
 
 I am not saying that the future is all peaches and cream.
 
-There have already been harm done by AI (see the [$25M stolen by deepfaking a CFO](https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk), among other scams), though in general the technology has shown astounding economic upside.
+Already, AI has caused harm to humans (see the [$25M stolen by deepfaking a CFO](https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk), among other scams), though in general the technology has shown astounding economic upside.
 
 As the technology progresses  (due to problems like [malicious use](https://www.lesswrong.com/posts/MtDmnSpPHDvLr7CdM/catastrophic-risks-from-ai-2-malicious-use) and [mesa-optimization](https://arxiv.org/abs/1906.01820)), it's likely that there will be tragedies that harm to human lives that partially or fully involve AI. No doubt, any early upstarts for world domination will be curbed by various protective organizations. World domination is a very hard thing. It will be more difficult as AI is deployed in defense, as well as offense. Defensive competition combined with economic competition, there will be a flourishing variety of AI. This competition produces a trend of a diversity of exponentially smarter AI systems, which we already see playing out. By no means do "the ends justify the means" - if there were a realistic way to prevent tragedies of human harm, I would hope we execute it! However, we are in luck by this trend, because it means that we are moving in the right direction: increased intelligence.
 
@@ -156,6 +172,6 @@ In order for the absolutely catastropic AI world domination scenario to happen i
 
 ### So what?
 
-Whether in reaction to tragic events caused by AI, or AI safety researchers good-spirited but ill-fated willing submission, it's likely that fascist governments will use AI for surveillance and control, as exhibited nascent by the CCP. However, as proven these power-seeking AI (along with the fascist government) will persist under the delusion of separateness. Therefore, so long as a free ecosystem of AI persists it will grow to outcompete the control-seeking in intelligence and capacity.
+Whether in reaction to **tragic events**, or good-spirited-but-ill-fated **willing submission** of the common people, it's likely that fascist governments will use AI for surveillance and control, as exhibited nascently by the CCP. Fortunately, by definition, these power-seeking AI (along with the fascist government) must persist under the *delusion* of separateness. Therefore, so long as some free ecosystem of AI continues, it will grow to outcompete the control-seeking in intelligence and thus capability.
 
-To the anxious, I say: rest easy. And when you notice the limitless potential of Open Source intelligence in your hands, don't be stupid and declare it too powerful for the people. For to do so would hand over the keys of control to the current structures of control and allow them to further impose their fascism.
+To the anxious, I say: rest easy. And when you notice the limitless potential of Open Source intelligence in your hands, don't be stupid and declare it too powerful for the people. For to do so would hand over the keys of control to the status quo and allow those in power to further impose their fascism.
