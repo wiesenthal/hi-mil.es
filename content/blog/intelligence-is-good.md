@@ -1,6 +1,7 @@
 ---
 createdAt: "2025-06-11"
 updatedAt: "2025-06-11"
+symbol: 🩵
 ---
 
 # Intelligence is Good
@@ -130,6 +131,8 @@ Think to your experience of the smartest decisions in life you have made.
 Were they directed towards self interest in a zero-sum context, or was it an unexpected win-win solution?
 
 At least from my experience, the smartest decisions in life are not motivated by pure self preservation but instead lead to mutual benefit and cooperation.
+
+
 
 Think as well to humanity's treatment of less intelligent life. Yes, the mainstream is still to subjugate animals for our amusement. But, the most learned of biologists recognize that we are linked with our ecosystem much more deeply than we think, and to limit the freedom of the natural world is to hobble our own.
 

@@ -12,16 +12,18 @@ async function readBlogFile(filePath: string) {
   console.log(data);
 
   const createdAt =
-    "createdAt" in data ? new Date(data.createdAt as string) : new Date();
+    "createdAt" in data ? new Date(String(data.createdAt)) : new Date();
   const updatedAt =
-    "updatedAt" in data ? new Date(data.updatedAt as string) : new Date();
+    "updatedAt" in data ? new Date(String(data.updatedAt)) : new Date();
   const isComplete = "isComplete" in data ? !!data.isComplete : true;
+  const symbol = "symbol" in data ? String(data.symbol) : null;
 
   return {
     content,
     createdAt,
     updatedAt,
     isComplete,
+    symbol,
   };
 }
 

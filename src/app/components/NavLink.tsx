@@ -14,7 +14,7 @@ export const NavLink = ({
   return (
     <Link
       href={href}
-      className={`rounded bg-[#00eaff] min-w-52 text-center py-2 text-black border-black border hover:brightness-125 ${className}`}
+      className={`min-w-52 max-w-52 rounded border border-black bg-[#00eaff] py-2 text-ellipsis text-center text-black hover:brightness-125 ${className}`}
       target={target}
     >
       {children}
