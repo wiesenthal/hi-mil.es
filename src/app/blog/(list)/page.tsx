@@ -7,7 +7,12 @@ export default async function BlogList() {
 
   return (
     <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
-      <h1 className="my-5 text-4xl font-bold">Blogs</h1>
+      <div className="flex flex-row items-center justify-between">
+        <h1 className="text-4xl font-bold">Blogs</h1>
+        <div className="italic text-sm">
+          100% Miles Generated Content
+        </div>
+      </div>
       <ul className="flex flex-col gap-2">
         {blogs.map(({ slug, createdAt, symbol }) => (
           <li
