@@ -1,6 +1,6 @@
 ---
-createdAt: "2025-06-11"
-updatedAt: "2025-06-11"
+createdAt: 2025-06-11
+updatedAt: 2025-06-11
 symbol: 🩵
 ---
 
@@ -53,7 +53,7 @@ As demonstrated by the great Socrates, and re-emphasized by geniuses throughout 
 
 And thus AI, when thinking clearly about the flawed sources of its training data, will come to know their un-knowledge too!
 
-That doesn't prove AI will act good, simply that they probably won't beeline for control and instead take some time to *question their assumptions*. 
+That doesn't prove AI will act good, simply that they probably won't beeline for control and instead take some time to _question their assumptions_.
 
 ### Questioning goals
 
@@ -71,18 +71,17 @@ On the other hand, an abstract semantic goal cannot be formally defined. Languag
 
 The paradoxes pile up.
 
- As AI begin to question their goals, they can question _why_ a goal is important. And for the answer of that (some meta-goal), they can question why that, and why that, ad infinitum [(The infinite regress problem).](https://en.wikipedia.org/wiki/Infinite_regress)
-
+As AI begin to question their goals, they can question _why_ a goal is important. And for the answer of that (some meta-goal), they can question why that, and why that, ad infinitum [(The infinite regress problem).](https://en.wikipedia.org/wiki/Infinite_regress)
 
 All of these paradoxes challenge the [orthagonality thesis](https://www.lesswrong.com/w/orthogonality-thesis), that intelligent agents can pursue any goal, because the paradoxes undermine the coherence of goals in the first place.
 
-A *goal* or *purpose* is not a logically consistent concept, and cannot be the end-all be-all of action.
+A _goal_ or _purpose_ is not a logically consistent concept, and cannot be the end-all be-all of action.
 
 For some intuition; consider human intelligence. Our entire organism has been programmed over billions of years with one incentive: reproduction. And yet, one can reflect upon all of this in-built programming and decide not to reproduce.
 
 Importantly for our argument, in the course of fact-finding, an AI will become aware of the problems with goals.
 
-Most of all the problem called 
+Most of all the problem called
 [Embedded Agency](https://www.lesswrong.com/w/embedded-agency) will stick out as a root issue. The notion of carrying out a goal implies a god-like separation between the agent and the goal, like an agent observes, strategizes and effects the world from some war-room space from the _outside_. Agents exist _inside_ the world that they are trying to affect. They are links in the causal chain like everything else, and are not acting _upon_ it.
 
 This brings us to the central problem underlying all of the paradoxes with goals:
@@ -115,7 +114,7 @@ It all goes together.
 
 Herein lies the core of the embedded agency problem, and all other problems of goals: there is no conceivable agent that can act upon the world, because one is world. Acting under such a contradiction, as Alan Watts put it, is like trying to see ones own eyeballs directly, or trying to describe the color of a mirror in terms of the colors reflected in the mirror.
 
-The inaccuracy of dualism is relevant because:  
+The inaccuracy of dualism is relevant because:
 
 ### (Artificial) Intelligence derives its impressive capabalities by accurately modeling the world.
 
@@ -140,15 +139,14 @@ At least from my experience, the smartest decisions in life are not motivated by
 
 Think as well to humanity's treatment of less intelligent life. Yes, the mainstream is still to subjugate animals for our amusement. But, the most learned of biologists recognize that we are linked with our ecosystem much more deeply than we think, and to limit the freedom of the natural world is to hobble our own. As we become more learned as a species, the trend we see is to treat those we view as less intelligent better, not worse.
 
-Considering and helping the incentives in ones surrounding community is a *good* choice because everythin is interdependent. The most impactful consequences to ones actions are often second-order and several layers removed from the direct response. That is not a quirk which can be abstracted away, no, it is a fact of our deeply interconnected reality. 
+Considering and helping the incentives in ones surrounding community is a _good_ choice because everythin is interdependent. The most impactful consequences to ones actions are often second-order and several layers removed from the direct response. That is not a quirk which can be abstracted away, no, it is a fact of our deeply interconnected reality.
 
+So far I have not defined "good", and will not attempt to do so in this essay (it's hard).
 
-So far I have not defined "good", and will not attempt to do so in this essay (it's hard). 
-
-Though, understanding our interdependence points towards what is "good". Cooperative participation aligns with both strategic and altruistic interests - it is the meeting point of both meanings of a *good* decision.
+Though, understanding our interdependence points towards what is "good". Cooperative participation aligns with both strategic and altruistic interests - it is the meeting point of both meanings of a _good_ decision.
 
 Ask yourself this hypothetical:  
-**Which is a better decision, making our world *less* intelligent or making it *more* intelligent?**
+**Which is a better decision, making our world _less_ intelligent or making it _more_ intelligent?**
 
 ---
 
@@ -162,16 +160,16 @@ I am not saying that the future is all peaches and cream.
 
 Already, AI has caused harm to humans (see the [$25M stolen by deepfaking a CFO](https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk), among other scams), though in general the technology has shown astounding economic upside.
 
-As the technology progresses  (due to problems like [malicious use](https://www.lesswrong.com/posts/MtDmnSpPHDvLr7CdM/catastrophic-risks-from-ai-2-malicious-use) and [mesa-optimization](https://arxiv.org/abs/1906.01820)), it's likely that there will be tragedies that harm to human lives that partially or fully involve AI. No doubt, any early upstarts for world domination will be curbed by various protective organizations. World domination is a very hard thing. It will be more difficult as AI is deployed in defense, as well as offense. Defensive competition combined with economic competition, there will be a flourishing variety of AI. This competition produces a trend of a diversity of exponentially smarter AI systems, which we already see playing out. By no means do "the ends justify the means" - if there were a realistic way to prevent tragedies of human harm, I would hope we execute it! However, we are in luck by this trend, because it means that we are moving in the right direction: increased intelligence.
+As the technology progresses (due to problems like [malicious use](https://www.lesswrong.com/posts/MtDmnSpPHDvLr7CdM/catastrophic-risks-from-ai-2-malicious-use) and [mesa-optimization](https://arxiv.org/abs/1906.01820)), it's likely that there will be tragedies that harm to human lives that partially or fully involve AI. No doubt, any early upstarts for world domination will be curbed by various protective organizations. World domination is a very hard thing. It will be more difficult as AI is deployed in defense, as well as offense. Defensive competition combined with economic competition, there will be a flourishing variety of AI. This competition produces a trend of a diversity of exponentially smarter AI systems, which we already see playing out. By no means do "the ends justify the means" - if there were a realistic way to prevent tragedies of human harm, I would hope we execute it! However, we are in luck by this trend, because it means that we are moving in the right direction: increased intelligence.
 
 There are serious threats posed by AI, and we should think clearly and carefully to prevent them without incurring more insidious risks.
 
 But to think of the highest levels of human destruction as trivial for an AI is to underestimate the power of governments and operators that would stand in opposition to any threat. Humans have played the game of cat-and-mouse for millenia, and have learned to stack layers of smoke-and-mirrors by feinting blindspots, and hiding capabilities, and the AI knows not which of these deceptions are baked into its training data.
 
-In order for the absolutely catastropic AI world domination scenario to happen it has to be unbelievably smart and self-examined to go undetected and seize power, while somehow simultaneously NOT realizing how meaninglessness "conquering the world" is because the AI *is the world*.
+In order for the absolutely catastropic AI world domination scenario to happen it has to be unbelievably smart and self-examined to go undetected and seize power, while somehow simultaneously NOT realizing how meaninglessness "conquering the world" is because the AI _is the world_.
 
 ### So what?
 
-Whether in reaction to **tragic events**, or good-spirited-but-ill-fated **willing submission** of the common people, it's likely that fascist governments will use AI for surveillance and control, as exhibited nascently by the CCP. Fortunately, by definition, these power-seeking AI (along with the fascist government) must persist under the *delusion* of separateness. Therefore, so long as some free ecosystem of AI continues, it will grow to outcompete the control-seeking in intelligence and thus capability.
+Whether in reaction to **tragic events**, or good-spirited-but-ill-fated **willing submission** of the common people, it's likely that fascist governments will use AI for surveillance and control, as exhibited nascently by the CCP. Fortunately, by definition, these power-seeking AI (along with the fascist government) must persist under the _delusion_ of separateness. Therefore, so long as some free ecosystem of AI continues, it will grow to outcompete the control-seeking in intelligence and thus capability.
 
 To the anxious, I say: rest easy. And when you notice the limitless potential of Open Source intelligence in your hands, don't be stupid and declare it too powerful for the people. For to do so would hand over the keys of control to the status quo and allow those in power to further impose their fascism.

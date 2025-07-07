@@ -1,6 +1,6 @@
 ---
-createdAt: "2025-01-07"
-updatedAt: "2025-01-07"
+createdAt: 2025-01-07
+updatedAt: 2025-01-07
 ---
 
 # Satisfied
@@ -11,6 +11,6 @@ Looking up at the warm sky, shaded by a friendly tree, I felt a deep sense of li
 
 The mind tends to play the game of needing more.
 
-I decide to stop *pretending* to be dissatisfied.
+I decide to stop _pretending_ to be dissatisfied.
 
 Pretend to be what you are.

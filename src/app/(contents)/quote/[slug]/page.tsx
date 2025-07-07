@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { readBlog } from "../utils/readBlog";
+import { readQuote } from "../utils/readQuote";
 import ReactMarkdown from "react-markdown";
 import { NavLink } from "~/app/components/NavLink";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -14,12 +14,12 @@ export default async function Blog({
   params: { slug: string };
 }) {
   try {
-    const { content, createdAt, updatedAt } = await readBlog(slug);
+    const { content, author } = (await readQuote(slug))!;
 
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
-        <div className="mx-auto flex w-full max-w-5xl flex-grow flex-col">
-          <div className="markdown prose prose-invert lg:prose-xl max-w-none">
+        <div className="mx-auto flex w-full max-w-5xl flex-grow flex-col ">
+          <div className="markdown prose prose-invert lg:prose-xl max-w-none flex-grow flex flex-col items-center justify-center">
             <ReactMarkdown
               components={{
                 code({ children, className, ...rest }) {
@@ -52,30 +52,16 @@ export default async function Blog({
             >
               {content}
             </ReactMarkdown>
+            <div className="flex flex-row items-center justify-between gap-2 max-md:justify-center">
+              <p className="flex-1 flex-grow text-right text-sm text-gray-500 max-md:hidden">
+                {author}
+              </p>
+            </div>
           </div>
-          <div className="flex-grow" />
-          <div className="flex flex-row items-center justify-between gap-2 max-md:justify-center">
-            <p className="flex-1 flex-grow text-sm text-gray-500 max-md:hidden">
-              Created at:{" "}
-              {createdAt.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                timeZone: "UTC",
-              })}
-            </p>
-            <NavLink href="/blog" target="_self">
-              Blogs
+          <div className="mx-auto flex flex-row items-center justify-between gap-2 max-md:justify-center">
+            <NavLink href="/quote" target="_self">
+              Quotes
             </NavLink>
-            <p className="flex-1 flex-grow text-right text-sm text-gray-500 max-md:hidden">
-              Updated at:{" "}
-              {updatedAt.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                timeZone: "UTC",
-              })}
-            </p>
           </div>
         </div>
       </div>

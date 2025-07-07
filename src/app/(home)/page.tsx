@@ -26,9 +26,12 @@ export default function HomePage() {
           <UserInput />
         </div>
       </div>
-      <div className="flex flex-grow flex-col pt-60">
+      <div className="flex flex-grow flex-col pt-32 gap-2">
         <NavLink href="/blog" target="_self">
           Blogs
+        </NavLink>
+        <NavLink href="/quote" target="_self">
+          Quotes
         </NavLink>
       </div>
       <div className="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-2 justify-self-end pb-4 lg:grid-cols-4">

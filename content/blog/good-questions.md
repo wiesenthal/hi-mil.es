@@ -1,6 +1,6 @@
 ---
-createdAt: "2025-05-09"
-updatedAt: "2025-06-06"
+createdAt: 2025-05-09
+updatedAt: 2025-06-06
 ---
 
 # What makes a good question, and what we share with LLMs
@@ -12,7 +12,7 @@ What is the best question you could ask them?
 ---
 
 Putting aside egoic interests such as status or influence, we will assume the goal of the question is to learn maximal information about your conversational partner. Following Claude Shannon's definition of information, you are seeking surprise. The lowest quality question would provide one bit: Yes/No.  
-The answer can even be less than a bit if it confirms what you already suspected, _e.g. "Are you enjoying the sunny weather?"_. To avoid the drudgery of small talk, one naive pitfall I used to (and still do) fall for is to ask a broad and deep question right away. _e.g. "What's the meaning of life?"_ It's a big question; but it often elicits a small answer.   
+The answer can even be less than a bit if it confirms what you already suspected, _e.g. "Are you enjoying the sunny weather?"_. To avoid the drudgery of small talk, one naive pitfall I used to (and still do) fall for is to ask a broad and deep question right away. _e.g. "What's the meaning of life?"_ It's a big question; but it often elicits a small answer.
 
 Why?  
 Asking such a broad, deep question with no context is like pointing to a big vague cloud of information and asking "what's that big vague cloud about?", only to receive the response "well it looks like a big vague cloud to me".

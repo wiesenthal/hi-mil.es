@@ -2,7 +2,7 @@
 
 import { db } from "~/db";
 import { messages } from "~/db/schema";
-import { getFirst } from "~/utils/getFirst";
+import { getFirst } from "~/utils/lambdas/getFirst";
 
 export type MessageInput = {
   userId: number;

@@ -1,6 +1,6 @@
 ---
-createdAt: "2025-04-24"
-updatedAt: "2025-04-24"
+createdAt: 2025-04-24
+updatedAt: 2025-04-24
 ---
 
 # Code the feature before the language
