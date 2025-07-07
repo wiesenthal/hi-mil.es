@@ -1,4 +1,3 @@
-import { Symbol } from "~/app/components/Symbol";
 import { listQuotes } from "../utils/listQuotes";
 import { NavLink } from "~/app/components/NavLink";
 import ReactMarkdown from "react-markdown";
@@ -18,10 +17,10 @@ export default async function BlogList() {
           <Link
             href={`/quote/${slug}`}
             key={slug}
-            className={`flex cursor-default flex-col justify-between gap-1 p-1 border-b border-black ${
+            className={`flex cursor-default flex-col justify-between gap-1 border-b border-black p-1 ${
               i % 2 === 0
-                ? "ml-auto items-end text-right rounded-bl"
-                : "mr-auto items-start text-left rounded-br"
+                ? "ml-auto items-end rounded-bl text-right"
+                : "mr-auto items-start rounded-br text-left"
             } ${type === "quote" ? "border-dotted" : type === "thought" ? "border-dashed" : type === "poem" ? "border-solid" : ""} `}
           >
             <div className="prose">

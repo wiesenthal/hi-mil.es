@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import usePerfect, { eq } from "../../hooks/usePerfect";
+import usePerfect, { eq } from "../../../hooks/usePerfect";
 
 export default function Page() {
   const { state, setState, onTransition, is } = usePerfect(0);
