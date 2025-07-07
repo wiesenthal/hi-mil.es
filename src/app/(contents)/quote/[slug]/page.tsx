@@ -53,7 +53,7 @@ export default async function Blog({
               {content}
             </ReactMarkdown>
             <div className="flex flex-row items-center justify-between gap-2 max-md:justify-center">
-              <p className="flex-1 flex-grow text-right text-sm text-gray-500 max-md:hidden">
+              <p className="flex-1 flex-grow text-right text-sm text-gray-500">
                 {author}
               </p>
             </div>
