@@ -12,7 +12,7 @@ export default function NowPage() {
         writing. This very website is like a little tree with which I express
         myself by ornamenting it with blogs and by structuring its code which
         you can see on its{" "}
-        <PrettyLink href="https://github.com/wiesenthal/hi-mil.es">
+        <PrettyLink href="https://github.com/wiesenthal/hi-mil.es/blob/main/src/app/now/page.tsx">
           github
         </PrettyLink>
         .{" "}
