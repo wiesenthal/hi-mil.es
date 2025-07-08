@@ -5,6 +5,8 @@ export default function NowPage() {
   return (
     <div className="flex size-full flex-col items-center justify-center gap-4 p-4">
       <h1 className="text-4xl">Now</h1>
+      <div className="text-sm text-gray-500">Updated 2025-07-07</div>
+
       <div className="size-full max-w-4xl">
         This is my now page. I created it to appease{" "}
         <PrettyLink href="https://sive.rs/now">Derek Sivers</PrettyLink>. Right
