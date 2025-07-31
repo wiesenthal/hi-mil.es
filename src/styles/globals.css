@@ -6,3 +6,15 @@
 .markdown > * {
   all: revert;
 }
+
+body:has(.home-layout) {
+  background-color: var(--page-bg-color, #d1c4ffb0);
+}
+
+body:has(.list-layout) {
+  background-color: var(--page-bg-color, #00eaff30);
+}
+
+body:has(.slug-layout) {
+  background-color: var(--page-bg-color, #00eaff60);
+}
