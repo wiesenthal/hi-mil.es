@@ -1,6 +1,6 @@
 ---
 createdAt: 2025-06-11
-updatedAt: 2025-06-11
+updatedAt: 2025-07-31
 symbol: 🩵
 ---
 
@@ -118,9 +118,9 @@ The inaccuracy of dualism is relevant because:
 
 ### (Artificial) Intelligence derives its impressive capabalities by accurately modeling the world.
 
-Present AI systems are Large Language Models, and they are only applicable to reality insofar at the language they model is an accurate model of reality.
+Present AI systems are Large Language Models, and they are only applicable to reality insofar at the language they model is an accurate model of reality. Concretely, [new research](https://arxiv.org/abs/2405.07987) shows that the best models' representations are converging to one reality, and their representational proximity to this reality accords to the model's performance.
 
-If one's model includes false pretenses, their applications will have blindspots that agents with more accurate models can take advantage of.
+In practice, if a model includes false pretenses, its application will have blindspots. Agents with more accurate models can take advantage of those blindspots to win against them.
 
 As discussed, improving ones own intelligence is a primary concern of AI systems. Within current and foreseeable systems, this means improving the accuracy of their model.
 If an agent models the world with a contradiction so foundational as dualism, it would be most prudent of the agent to self-correct.
@@ -154,7 +154,7 @@ Ask yourself this hypothetical:
 
 How to reconcile with the default view?
 
-Too-commonly AI Safety research has over-emphasized on gradient-descent as a maximization of effectiveness, while forgetting that model accuracy (which we use to benchmark these systems) is the basis of their effectiveness.
+Too-commonly AI Safety research has over-emphasized on gradient-descent as a maximization of effectiveness, framing intelligence as the capability to achieve goals. This view neglects that model accuracy (which we use to benchmark these systems) is the basis of their effectiveness.
 
 I am not saying that the future is all peaches and cream.
 
