@@ -22,11 +22,16 @@ export default {
           "50%": { opacity: "0.5", filter: "blur(3px)" },
           "100%": { opacity: "1", filter: "blur(0px)" },
         },
+        pullIn: {
+          "0%": { backgroundPosition: "100% 100%" },
+          "100%": { backgroundPosition: "0% 0%" },
+        },
       },
       animation: {
         shimmer: "shimmer 1s linear infinite",
         "fade-in": "fadeIn 0.15s ease-out",
         "fade-in-2": "fadeIn2 0.3s ease-out",
+        "bg-pull-in": "pullIn 0.15s ease-out",
       },
     },
   },
