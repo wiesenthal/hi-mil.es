@@ -10,7 +10,7 @@ export default async function BlogList() {
       <div className="animate-fade-in flex flex-row items-center justify-between">
         <h1 className="text-4xl font-light">Blogs</h1>
         <div className="text-sm font-light italic">
-          One Hundred Percent Miles Generated Content
+          Pure Miles Generated Content
         </div>
       </div>
       <ul className="animate-fade-in-2 flex flex-col gap-2">
