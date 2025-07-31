@@ -17,11 +17,11 @@ export default async function BlogList() {
           <Link
             href={`/quote/${slug}`}
             key={slug}
-            className={`flex cursor-default flex-col justify-between gap-1 border-b border-black p-1 ${
+            className={`flex cursor-default rounded-t flex-col justify-between gap-1 border-b border-[#15ffad] p-1  from-white/10 via-20% via-white/30 to-white/50 ${
               i % 2 === 0
-                ? "ml-auto items-end rounded-bl text-right"
-                : "mr-auto items-start rounded-br text-left"
-            } ${type === "quote" ? "border-dotted" : type === "thought" ? "border-dashed" : type === "poem" ? "border-solid" : ""} `}
+                ? "ml-auto items-end rounded-bl text-right bg-gradient-to-tr pr-2 pl-4"
+                : "mr-auto items-start rounded-br text-left bg-gradient-to-tl pl-2 pr-4"
+            } ${type === "quote" ? "border-solid border-b-2" : type === "thought" ? "border-double border-b-4" : type === "poem" ? "border-solid border-b-4" : ""} `}
           >
             <div className="prose">
               <ReactMarkdown>{content}</ReactMarkdown>

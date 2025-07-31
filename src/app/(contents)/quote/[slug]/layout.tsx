@@ -8,7 +8,7 @@ export default function Layout({
   return (
     <div
       lang="en"
-      className={`${GeistSans.variable} h-full bg-gradient-to-br from-[#a0ffde40] via-white to-zinc-100 bg-[length:100%_200%] text-black`}
+      className={`${GeistSans.variable} h-full bg-gradient-to-br from-[#00eaff40] via-white to-zinc-100 bg-[length:100%_200%] text-black`}
       style={{
         backgroundAttachment: "fixed",
       }}
