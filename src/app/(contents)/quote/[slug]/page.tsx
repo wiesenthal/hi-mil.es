@@ -19,7 +19,7 @@ export default async function Blog({
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
         <div className="mx-auto flex w-full max-w-5xl flex-grow flex-col ">
-          <div className="markdown prose prose-invert lg:prose-xl max-w-none flex-grow flex flex-col items-center justify-center">
+          <div className="markdown animate-fade-in prose prose-invert lg:prose-xl max-w-none flex-grow flex flex-col items-center justify-center">
             <ReactMarkdown
               components={{
                 code({ children, className, ...rest }) {
@@ -53,12 +53,12 @@ export default async function Blog({
               {content}
             </ReactMarkdown>
             <div className="flex flex-row items-center justify-between gap-2 max-md:justify-center">
-              <p className="flex-1 flex-grow text-right text-sm text-gray-500">
+              <p className="flex-1 flex-grow animate-fade-in-2 text-right text-sm text-gray-500">
                 {author}
               </p>
             </div>
           </div>
-          <div className="mx-auto flex flex-row items-center justify-between gap-2 max-md:justify-center">
+          <div className="mx-auto flex flex-row items-center justify-between gap-2 max-md:justify-center animate-fade-in">
             <NavLink href="/quote" target="_self">
               Quotes
             </NavLink>

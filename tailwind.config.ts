@@ -13,9 +13,20 @@ export default {
           "0%": { backgroundPosition: "100%", backgroundSize: "200% 100%" },
           "100%": { backgroundPosition: "-100%", backgroundSize: "200% 100%" },
         },
+        fadeIn: {
+          "0%": { opacity: "1", filter: "blur(3px)" },
+          "100%": { opacity: "1", filter: "blur(0px)" },
+        },
+        fadeIn2: {
+          "0%": { opacity: "0", filter: "blur(4px)" },
+          "50%": { opacity: "0.5", filter: "blur(3px)" },
+          "100%": { opacity: "1", filter: "blur(0px)" },
+        },
       },
       animation: {
         shimmer: "shimmer 1s linear infinite",
+        "fade-in": "fadeIn 0.15s ease-out",
+        "fade-in-2": "fadeIn2 0.3s ease-out",
       },
     },
   },

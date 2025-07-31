@@ -7,13 +7,13 @@ export default async function BlogList() {
 
   return (
     <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
-      <div className="flex flex-row items-center justify-between">
+      <div className="animate-fade-in flex flex-row items-center justify-between">
         <h1 className="text-4xl font-light">Blogs</h1>
-        <div className="italic text-sm font-light">
+        <div className="text-sm font-light italic">
           One Hundred Percent Miles Generated Content
         </div>
       </div>
-      <ul className="flex flex-col gap-2">
+      <ul className="animate-fade-in-2 flex flex-col gap-2">
         {blogs.map(({ slug, createdAt, symbol }) => (
           <li
             key={slug}
@@ -39,7 +39,7 @@ export default async function BlogList() {
         ))}
       </ul>
       <div className="flex-grow" />
-      <div className="flex w-full flex-row items-center justify-center">
+      <div className="flex w-full flex-row items-center justify-center animate-fade-in">
         <NavLink href="/" target="_self">
           Home
         </NavLink>

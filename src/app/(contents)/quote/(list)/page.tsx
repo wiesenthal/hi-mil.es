@@ -8,11 +8,11 @@ export default async function BlogList() {
 
   return (
     <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
-      <div className="flex flex-row items-center justify-between">
+      <div className="animate-fade-in flex flex-row items-center justify-between">
         <h1 className="text-4xl font-light">Quotes ~ Thoughts ~ Poems</h1>
         <div className="text-sm italic font-light">Ideas I Live With</div>
       </div>
-      <ul className="flex max-h-full w-full flex-col gap-8 overflow-y-auto">
+      <ul className="animate-fade-in-2 flex max-h-full w-full flex-col gap-8 overflow-y-auto">
         {quotes.map(({ slug, author, content, type }, i) => (
           <Link
             href={`/quote/${slug}`}
@@ -31,7 +31,7 @@ export default async function BlogList() {
         ))}
       </ul>
       <div className="flex-grow" />
-      <div className="flex w-full flex-row items-center justify-center">
+      <div className="flex w-full flex-row items-center justify-center animate-fade-in">
         <NavLink href="/" target="_self">
           Home
         </NavLink>

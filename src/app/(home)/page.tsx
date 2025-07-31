@@ -18,7 +18,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex flex-col items-start">
-          <p className="text-xl">
+          <p className="text-xl animate-fade-in">
             Hello visitor and welcome to my website. 
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function HomePage() {
           <UserInput />
         </div>
       </div>
-      <div className="flex flex-grow flex-col pt-32 gap-2">
+      <div className="flex flex-grow flex-col pt-32 gap-2 animate-fade-in-2">
         <NavLink href="/blog" target="_self">
           Blogs
         </NavLink>
@@ -34,7 +34,7 @@ export default function HomePage() {
           Quotes
         </NavLink>
       </div>
-      <div className="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-2 justify-self-end pb-4 lg:grid-cols-4">
+      <div className="grid grid-cols-2 items-center justify-center gap-x-8 gap-y-2 justify-self-end pb-4 lg:grid-cols-4 animate-fade-in">
         <PrettyLink href="https://substack.com/@milessmiles">
           substack
         </PrettyLink>
