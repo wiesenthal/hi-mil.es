@@ -9,8 +9,8 @@ export default async function BlogList() {
   return (
     <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
       <div className="flex flex-row items-center justify-between">
-        <h1 className="text-4xl font-bold">Quotes & Thoughts</h1>
-        <div className="text-sm italic">Ideas I live by</div>
+        <h1 className="text-4xl font-light">Quotes ~ Thoughts ~ Poems</h1>
+        <div className="text-sm italic font-light">Ideas I Live With</div>
       </div>
       <ul className="flex max-h-full w-full flex-col gap-8 overflow-y-auto">
         {quotes.map(({ slug, author, content, type }, i) => (

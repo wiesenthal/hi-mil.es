@@ -8,9 +8,9 @@ export default async function BlogList() {
   return (
     <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
       <div className="flex flex-row items-center justify-between">
-        <h1 className="text-4xl font-bold">Blogs</h1>
-        <div className="italic text-sm">
-          100% Miles Generated Content
+        <h1 className="text-4xl font-light">Blogs</h1>
+        <div className="italic text-sm font-light">
+          One Hundred Percent Miles Generated Content
         </div>
       </div>
       <ul className="flex flex-col gap-2">
@@ -27,7 +27,7 @@ export default async function BlogList() {
               {slug}
               <Symbol>{symbol}</Symbol>
             </NavLink>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm font-light">
               {createdAt.toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
