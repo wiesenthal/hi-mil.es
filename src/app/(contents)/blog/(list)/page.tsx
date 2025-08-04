@@ -1,6 +1,7 @@
 import { Symbol } from "~/app/components/Symbol";
 import { listBlogs } from "../utils/listBlogs";
 import { NavLink } from "~/app/components/NavLink";
+import { dashNameToSentence } from "~/utils/lambdas/dashNameToSentence";
 
 export default async function BlogList() {
   const blogs = await listBlogs();
@@ -24,7 +25,7 @@ export default async function BlogList() {
               className="relative md:min-w-96"
               target="_self"
             >
-              {slug}
+              {dashNameToSentence(slug)}
               <Symbol>{symbol}</Symbol>
               <p className="invisible absolute left-0 top-[50%] -translate-x-[100%] -translate-y-[50%] pr-2 text-sm font-light text-black group-hover:visible">
                 {createdAt.toLocaleDateString("en-US", {
