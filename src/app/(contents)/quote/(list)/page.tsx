@@ -8,20 +8,20 @@ export default async function BlogList() {
 
   return (
     <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
-      <div className="animate-fade-in flex flex-row items-center justify-between">
+      <div className="flex animate-fade-in flex-row items-center justify-between">
         <h1 className="text-4xl font-light">Quotes ~ Thoughts ~ Poems</h1>
-        <div className="text-sm italic font-light">Ideas I Live With</div>
+        <div className="text-sm font-light italic">Ideas I Live With</div>
       </div>
-      <ul className="animate-fade-in-2 flex max-h-full w-full flex-col gap-8 overflow-y-auto">
+      <ul className="flex max-h-full w-full animate-fade-in-2 flex-col gap-8 overflow-y-auto">
         {quotes.map(({ slug, author, content, type }, i) => (
           <Link
             href={`/quote/${slug}`}
             key={slug}
-            className={`flex cursor-default rounded-t flex-col justify-between gap-1 border-b border-[#15ffad] p-1  from-white/10 via-20% via-white/30 to-white/50 ${
+            className={`flex cursor-auto flex-col justify-between gap-1 rounded-t border-b border-[#15ffad] from-white/10 via-white/30 via-20% to-white/50 p-1 ${
               i % 2 === 0
-                ? "ml-auto items-end rounded-bl text-right bg-gradient-to-tr pr-2 pl-4"
-                : "mr-auto items-start rounded-br text-left bg-gradient-to-tl pl-2 pr-4"
-            } ${type === "quote" ? "border-solid border-b-2" : type === "thought" ? "border-double border-b-4" : type === "poem" ? "border-solid border-b-4" : ""} `}
+                ? "ml-auto items-end rounded-bl bg-gradient-to-tr pl-4 pr-2 text-right"
+                : "mr-auto items-start rounded-br bg-gradient-to-tl pl-2 pr-4 text-left"
+            } ${type === "quote" ? "border-b-2 border-solid" : type === "thought" ? "border-b-4 border-double" : type === "poem" ? "border-b-4 border-solid" : ""} `}
           >
             <div className="prose">
               <ReactMarkdown>{content}</ReactMarkdown>
@@ -31,7 +31,7 @@ export default async function BlogList() {
         ))}
       </ul>
       <div className="flex-grow" />
-      <div className="flex w-full flex-row items-center justify-center animate-fade-in">
+      <div className="flex w-full animate-fade-in flex-row items-center justify-center">
         <NavLink href="/" target="_self">
           Home
         </NavLink>
