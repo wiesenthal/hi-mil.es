@@ -7,10 +7,10 @@ export default async function BlogList() {
   const blogs = await listBlogs();
 
   return (
-    <div className="mx-auto flex h-full max-w-5xl flex-col gap-8 p-4">
-      <div className="flex animate-fade-in flex-row items-center justify-between">
+    <div className="mx-auto flex h-full flex-col gap-8 p-4">
+      <div className="flex animate-fade-in flex-col items-center justify-center">
         <h1 className="text-4xl font-light">Blogs</h1>
-        <div className="text-sm font-light italic">
+        <div className="text-xs font-light text-center tracking-tighter">
           Pure Miles Generated Content
         </div>
       </div>
@@ -18,7 +18,7 @@ export default async function BlogList() {
         {blogs.map(({ slug, createdAt, symbol }) => (
           <li
             key={slug}
-            className="group relative flex w-full max-w-5xl flex-row items-center justify-center gap-2"
+            className="group relative flex flex-row items-center justify-center gap-2"
           >
             <NavLink
               href={`/blog/${slug}`}

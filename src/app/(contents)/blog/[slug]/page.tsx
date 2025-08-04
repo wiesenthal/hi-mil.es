@@ -18,7 +18,7 @@ export default async function Blog({
 
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
-        <div className="mx-auto flex w-full max-w-5xl flex-grow flex-col">
+        <div className="mx-auto flex w-full flex-grow flex-col">
           <div className="markdown prose prose-invert lg:prose-xl animate-fade-in max-w-none">
             <ReactMarkdown
               components={{
