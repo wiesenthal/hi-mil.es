@@ -6,18 +6,18 @@ export default async function BlogList() {
   const blogs = await listBlogs();
 
   return (
-    <div className="mx-auto flex h-full flex-col gap-8 p-4 lg:max-w-5xl">
-      <div className="animate-fade-in flex flex-row items-center justify-between">
+    <div className="mx-auto flex h-full max-w-5xl flex-col gap-8 p-4">
+      <div className="flex animate-fade-in flex-row items-center justify-between">
         <h1 className="text-4xl font-light">Blogs</h1>
         <div className="text-sm font-light italic">
           Pure Miles Generated Content
         </div>
       </div>
-      <ul className="animate-fade-in-2 flex flex-col gap-2">
+      <ul className="flex animate-fade-in-2 flex-col gap-2">
         {blogs.map(({ slug, createdAt, symbol }) => (
           <li
             key={slug}
-            className="flex flex-row items-center justify-between gap-2"
+            className="group relative flex w-full max-w-5xl flex-row items-center justify-center gap-2"
           >
             <NavLink
               href={`/blog/${slug}`}
@@ -26,20 +26,20 @@ export default async function BlogList() {
             >
               {slug}
               <Symbol>{symbol}</Symbol>
+              <p className="invisible absolute left-0 top-[50%] -translate-x-[100%] -translate-y-[50%] pr-2 text-sm font-light text-black group-hover:visible">
+                {createdAt.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  timeZone: "UTC",
+                })}
+              </p>
             </NavLink>
-            <p className="text-sm font-light">
-              {createdAt.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                timeZone: "UTC",
-              })}
-            </p>
           </li>
         ))}
       </ul>
       <div className="flex-grow" />
-      <div className="flex w-full flex-row items-center justify-center animate-fade-in">
+      <div className="flex w-full animate-fade-in flex-row items-center justify-center">
         <NavLink href="/" target="_self">
           Home
         </NavLink>
