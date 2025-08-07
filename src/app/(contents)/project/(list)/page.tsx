@@ -35,7 +35,7 @@ export default async function ProjectList() {
                 <PrettyLink
                   href={project.html_url}
                   target="_blank"
-                  className="absolute -right-20 top-1/2 -translate-y-1/2 rounded px-2 py-1 text-xs font-light transition-colors"
+                  className="absolute hidden md:block -right-20 top-1/2 -translate-y-1/2 rounded px-2 py-1 text-xs font-light transition-colors"
                 >
                   GitHub →
                 </PrettyLink>

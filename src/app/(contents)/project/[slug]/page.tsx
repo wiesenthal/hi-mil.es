@@ -75,7 +75,7 @@ export default async function Project({
           </div>
 
           {/* README Content */}
-          <div className="markdown prose prose-invert lg:prose-xl max-w-none animate-fade-in">
+          <div className="markdown prose prose-invert lg:prose-xl max-w-none animate-fade-in break-words">
             <ReactMarkdown
               components={{
                 code({ children, className, ...rest }) {

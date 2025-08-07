@@ -1,7 +1,3 @@
-export default async function ProjectListLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <>{children}</>;
-}
+import ListLayout from "~/app/components/ListLayout";
+
+export default ListLayout;
