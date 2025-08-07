@@ -33,7 +33,7 @@ Under fixed weights and seed, if you give an LLM the same prompt it will generat
 
 Unless you are training the model, an LLM's weights are frozen while it is being used.
 
-The random seed can be waved away. The seed is simply a number which adds variance to sampling of the next word from the probability distribition the model generates of all possible words. It doesn't add useful information so you can use the same random seed every time.
+The random seed can be waved away. The seed is a number which adds variance to the next sampling from the model's distribution of all possible words. It doesn't add useful information so you can use the same random seed every time.
 
 In practice, the LLM's output is sensitive only to one variable: **the prompt**.
 
