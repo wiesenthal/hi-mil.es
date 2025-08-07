@@ -5,7 +5,6 @@ import { NavLink } from "~/app/components/NavLink";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { PrettyLink } from "~/app/components/PrettyLink";
-import LikeButton from "~/app/components/LikeButton";
 
 export const dynamic = "force-static";
 

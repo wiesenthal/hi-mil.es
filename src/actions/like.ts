@@ -67,10 +67,13 @@ export const getLikeStats = async (
     .select({ count: count() })
     .from(likes)
     .where(
-      and(eq(likes.contentType, contentType), eq(likes.contentSlug, contentSlug)),
+      and(
+        eq(likes.contentType, contentType),
+        eq(likes.contentSlug, contentSlug),
+      ),
     );
 
-  const likeCount = countResult?.count || 0;
+  const likeCount = countResult?.count ?? 0;
 
   // Check if user has liked (if userId provided)
   let isLiked = false;
@@ -116,7 +119,10 @@ export const getContentLikes = async (
   contentSlug: string,
 ) => {
   return db.query.likes.findMany({
-    where: and(eq(likes.contentType, contentType), eq(likes.contentSlug, contentSlug)),
+    where: and(
+      eq(likes.contentType, contentType),
+      eq(likes.contentSlug, contentSlug),
+    ),
     with: {
       user: true,
     },
