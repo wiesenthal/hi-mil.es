@@ -27,7 +27,7 @@ export default async function ProjectList() {
               <div className="relative flex items-center gap-4">
                 <NavLink
                   href={`/project/${project.slug}`}
-                  className="w-96 max-w-96 text-lg font-light hover:underline"
+                  className="w-96 max-w-96"
                   target="_self"
                 >
                   {project.name}
