@@ -5,6 +5,7 @@ import { NavLink } from "~/app/components/NavLink";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { PrettyLink } from "~/app/components/PrettyLink";
+import LikeButton from "~/app/components/LikeButton";
 
 export const dynamic = "force-static";
 
@@ -18,7 +19,12 @@ export default async function Blog({
 
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
-        <div className="mx-auto flex w-full max-w-5xl flex-grow flex-col ">
+        <div className="mx-auto flex w-full max-w-5xl flex-grow flex-col relative">
+          <LikeButton 
+            contentType="quote" 
+            contentSlug={slug}
+            className="absolute top-0 left-0 z-10"
+          />
           <div className="markdown animate-fade-in prose prose-invert lg:prose-xl max-w-none flex-grow flex flex-col items-center justify-center">
             <ReactMarkdown
               components={{
@@ -58,7 +64,7 @@ export default async function Blog({
               </p>
             </div>
           </div>
-          <div className="mx-auto flex flex-row items-center justify-between gap-2 max-md:justify-center animate-fade-in">
+          <div className="mx-auto flex flex-row items-center justify-center gap-4 max-md:justify-center animate-fade-in">
             <NavLink href="/quote" target="_self">
               Quotes
             </NavLink>

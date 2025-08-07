@@ -5,6 +5,7 @@ import { NavLink } from "~/app/components/NavLink";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { PrettyLink } from "~/app/components/PrettyLink";
+import LikeButton from "~/app/components/LikeButton";
 
 export const dynamic = "force-static";
 
@@ -18,7 +19,12 @@ export default async function Blog({
 
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
-        <div className="mx-auto flex w-full flex-grow flex-col">
+        <div className="mx-auto flex w-full flex-grow flex-col relative">
+          <LikeButton 
+            contentType="blog" 
+            contentSlug={slug}
+            className="absolute top-0 left-0 z-10"
+          />
           <div className="markdown prose prose-invert lg:prose-xl animate-fade-in max-w-none">
             <ReactMarkdown
               components={{

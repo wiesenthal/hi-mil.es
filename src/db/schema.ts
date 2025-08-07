@@ -2,12 +2,16 @@ import { sql } from "drizzle-orm";
 import {
   foreignKey,
   integer,
+  pgEnum,
   pgTable,
   primaryKey,
   serial,
   text,
   timestamp,
+  unique,
 } from "drizzle-orm/pg-core";
+
+export const contentTypeEnum = pgEnum("content_type", ["blog", "quote"]);
 
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
@@ -44,5 +48,19 @@ export const messages = pgTable(
       foreignColumns: [visits.id, visits.userId],
     }),
     pk: primaryKey({ columns: [table.userId, table.visitId, table.id] }),
+  }),
+);
+
+export const likes = pgTable(
+  "likes",
+  {
+    id: serial("id").primaryKey(),
+    userId: integer("user_id").references(() => users.id).notNull(),
+    contentType: contentTypeEnum("content_type").notNull(),
+    contentSlug: text("content_slug").notNull(),
+    createdAt: timestamp("created_at").default(sql`now()`),
+  },
+  (table) => ({
+    userContentUnique: unique().on(table.userId, table.contentType, table.contentSlug),
   }),
 );

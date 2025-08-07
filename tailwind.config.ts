@@ -26,12 +26,17 @@ export default {
           "0%": { backgroundPosition: "100% 100%" },
           "100%": { backgroundPosition: "0% 0%" },
         },
+        "heart-beat": {
+          "0%, 10%, 50%, 90%, 100%": { scale: "1" },
+          "40%, 60%": { scale: "1.5" },
+        },
       },
       animation: {
         shimmer: "shimmer 1s linear infinite",
         "fade-in": "fadeIn 0.15s ease-out",
         "fade-in-2": "fadeIn2 0.3s ease-out",
         "bg-pull-in": "pullIn 0.15s ease-out",
+        "heart-beat": "heart-beat 0.5s linear infinite",
       },
     },
   },

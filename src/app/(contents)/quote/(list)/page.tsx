@@ -2,6 +2,7 @@ import { listQuotes } from "../utils/listQuotes";
 import { NavLink } from "~/app/components/NavLink";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
+import LikeButton from "~/app/components/LikeButton";
 
 export default async function BlogList() {
   const quotes = await listQuotes();
@@ -19,7 +20,7 @@ export default async function BlogList() {
           <Link
             href={`/quote/${slug}`}
             key={slug}
-            className={`max-w-5xl flex cursor-auto flex-col justify-between gap-1 rounded-t border-b border-[#15ffad] from-white/10 via-white/30 via-20% to-white/50 p-1 ${
+            className={`max-w-5xl relative flex cursor-auto flex-col justify-between gap-1 rounded-t border-b border-[#15ffad] from-white/10 via-white/30 via-20% to-white/50 p-1 ${
               i % 2 === 0
                 ? "ml-auto items-end rounded-bl bg-gradient-to-tr pl-4 pr-2 text-right"
                 : "mr-auto items-start rounded-br bg-gradient-to-tl pl-2 pr-4 text-left"
@@ -28,7 +29,12 @@ export default async function BlogList() {
             <div className="prose">
               <ReactMarkdown>{content}</ReactMarkdown>
             </div>
-            <p className="text-sm text-gray-500">{author}</p>
+              <p className="text-sm text-gray-500">{author}</p>
+              <LikeButton 
+                contentType="quote" 
+                contentSlug={slug}
+                className="absolute -bottom-8 left-1/2 -translate-x-1/2"
+              />
           </Link>
         ))}
       </ul>
