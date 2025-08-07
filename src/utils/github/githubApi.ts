@@ -37,59 +37,77 @@ const GitHubReadmeSchema = z.object({
 
 type GitHubRepository = z.infer<typeof GitHubRepositorySchema>;
 
-const GITHUB_API_BASE = 'https://api.github.com';
+const GITHUB_API_BASE = "https://api.github.com";
 
-export async function fetchUserRepositories(username: string): Promise<GitHubRepository[]> {
+export async function fetchUserRepositories(
+  username: string,
+): Promise<GitHubRepository[]> {
   try {
-    const response = await fetch(`${GITHUB_API_BASE}/users/${username}/repos?sort=updated&per_page=100`, {
-      headers: {
-        'Accept': 'application/vnd.github+json',
-        'User-Agent': 'hi-mil.es'
+    const response = await fetch(
+      `${GITHUB_API_BASE}/users/${username}/repos?sort=updated&per_page=100`,
+      {
+        headers: {
+          Accept: "application/vnd.github+json",
+          "User-Agent": "hi-mil.es",
+        },
+        // Cache for 3 hours to avoid hitting rate limits too often
+        next: { revalidate: 10800 },
       },
-      // Cache for 5 minutes to avoid hitting rate limits too often
-      next: { revalidate: 300 }
-    });
+    );
 
     if (!response.ok) {
-      throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+      throw new Error(
+        `GitHub API error: ${response.status} ${response.statusText}`,
+      );
     }
 
     const reposData: unknown = await response.json();
     const repos = z.array(GitHubRepositorySchema).parse(reposData);
-    
+
     // Filter out archived, disabled, and empty repos, and sort by updated date
     return repos
-      .filter(repo => !repo.archived && !repo.disabled && repo.description)
-      .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+      .filter((repo) => !repo.archived && !repo.disabled && repo.description)
+      .sort(
+        (a, b) =>
+          new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime(),
+      );
   } catch (error) {
-    console.error('Error fetching repositories:', error);
+    console.error("Error fetching repositories:", error);
     return [];
   }
 }
 
-export async function fetchRepositoryReadme(owner: string, repo: string): Promise<string | null> {
+export async function fetchRepositoryReadme(
+  owner: string,
+  repo: string,
+): Promise<string | null> {
   try {
-    const response = await fetch(`${GITHUB_API_BASE}/repos/${owner}/${repo}/readme`, {
-      headers: {
-        'Accept': 'application/vnd.github+json',
-        'User-Agent': 'hi-mil.es'
+    const response = await fetch(
+      `${GITHUB_API_BASE}/repos/${owner}/${repo}/readme`,
+      {
+        headers: {
+          Accept: "application/vnd.github+json",
+          "User-Agent": "hi-mil.es",
+        },
+        // Cache for 1 hour
+        next: { revalidate: 3600 },
       },
-      // Cache for 1 hour
-      next: { revalidate: 3600 }
-    });
+    );
 
     if (!response.ok) {
       if (response.status === 404) {
         return null; // No README found
       }
-      throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+      throw new Error(
+        `GitHub API error: ${response.status} ${response.statusText}`,
+      );
     }
 
     const readmeData: unknown = await response.json();
     const readme = GitHubReadmeSchema.parse(readmeData);
-    
+
     // Decode base64 content
-    const content = Buffer.from(readme.content, 'base64').toString('utf-8');
+    const content = Buffer.from(readme.content, "base64").toString("utf-8");
     return content;
   } catch (error) {
     console.error(`Error fetching README for ${owner}/${repo}:`, error);
