@@ -30,6 +30,9 @@ export default function HomePage() {
         <NavLink href="/quote" target="_self">
           Quotes
         </NavLink>
+        <NavLink href="/project" target="_self">
+          Projects
+        </NavLink>
       </div>
       <div className="grid animate-fade-in grid-cols-2 items-center justify-center gap-x-8 gap-y-2 justify-self-end pb-4 lg:grid-cols-4">
         <PrettyLink href="https://substack.com/@milessmiles">

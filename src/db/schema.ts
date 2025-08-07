@@ -11,7 +11,7 @@ import {
   unique,
 } from "drizzle-orm/pg-core";
 
-export const contentTypeEnum = pgEnum("content_type", ["blog", "quote"]);
+export const contentTypeEnum = pgEnum("content_type", ["blog", "quote", "project"]);
 
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
