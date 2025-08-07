@@ -19,13 +19,8 @@ export default async function Blog({
 
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
-        <div className="mx-auto flex w-full max-w-5xl flex-grow flex-col relative">
-          <LikeButton 
-            contentType="quote" 
-            contentSlug={slug}
-            className="absolute top-0 left-0 z-10"
-          />
-          <div className="markdown animate-fade-in prose prose-invert lg:prose-xl max-w-none flex-grow flex flex-col items-center justify-center">
+        <div className="relative mx-auto flex w-full max-w-5xl flex-grow flex-col">
+          <div className="markdown prose prose-invert lg:prose-xl flex max-w-none flex-grow animate-fade-in flex-col items-center justify-center">
             <ReactMarkdown
               components={{
                 code({ children, className, ...rest }) {
@@ -64,7 +59,7 @@ export default async function Blog({
               </p>
             </div>
           </div>
-          <div className="mx-auto flex flex-row items-center justify-center gap-4 max-md:justify-center animate-fade-in">
+          <div className="mx-auto flex animate-fade-in flex-row items-center justify-center gap-4 max-md:justify-center">
             <NavLink href="/quote" target="_self">
               Quotes
             </NavLink>

@@ -66,22 +66,22 @@ export function LikeButton({
     }
   };
 
-  if (!hasLoaded) {
-    return (
-      <div
-        className={`flex items-center gap-1 text-sm text-gray-500 ${className} animate-heart-beat`}
-      >
-        ß<span className="animate-pulse">♡</span>
-        <span className="animate-pulse">...</span>
-      </div>
-    );
-  }
+  // if (!hasLoaded) {
+  //   return (
+  //     <div
+  //       className={`flex text-base items-center gap-1  text-gray-500 ${className}`}
+  //     >
+  //       <span className="animate-pulse">♡</span>
+  //       <span className="animate-pulse font-mono">-</span>
+  //     </div>
+  //   );
+  // }
 
   return (
     <button
       onClick={handleToggleLike}
       disabled={!userId || isLoading}
-      className={`flex transform-origin-center w-4 items-center gap-1 text-sm transition-all duration-150 ${
+      className={`transform-origin-center flex w-4 items-center gap-1 text-sm transition-all duration-150 ${
         userId ? "cursor-pointer" : "cursor-not-allowed opacity-60"
       } ${isLoading ? "animate-heart-beat" : ""} ${className}`}
       title={
@@ -106,7 +106,7 @@ export function LikeButton({
           isLiked ? "font-medium text-red-500" : "text-gray-500"
         } transition-colors duration-150`}
       >
-        {likeCount}
+        {hasLoaded ? likeCount : "-"}
       </span>
     </button>
   );
