@@ -18,7 +18,7 @@ export default async function ProjectList() {
         </div>
       </div>
       <ul className="flex max-h-full w-full animate-fade-in-2 flex-col items-center gap-8 overflow-y-auto border-b">
-        {projects.map((project, i) => (
+        {projects.map((project) => (
           <div
             key={project.slug}
             className="relative flex w-full max-w-5xl cursor-auto flex-col justify-between gap-2 rounded from-white/10 via-white/30 via-20% to-white/50 p-3 shadow-inner drop-shadow"

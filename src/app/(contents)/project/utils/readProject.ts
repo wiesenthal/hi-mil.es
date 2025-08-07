@@ -1,11 +1,14 @@
-import { fetchRepositoryReadme, fetchUserRepositories } from "~/utils/github/githubApi";
+import {
+  fetchRepositoryReadme,
+  fetchUserRepositories,
+} from "~/utils/github/githubApi";
 import { ProjectSchema } from "./Project";
 
 export async function readProject(slug: string) {
   try {
     const repos = await fetchUserRepositories("wiesenthal");
-    const repo = repos.find(r => r.name === slug);
-    
+    const repo = repos.find((r) => r.name === slug);
+
     if (!repo) {
       return null;
     }
@@ -36,7 +39,10 @@ export async function readProject(slug: string) {
 
     return {
       slug: repo.name,
-      content: readmeContent || repo.description || `# ${repo.name}\n\nNo README available for this project.`,
+      content:
+        readmeContent ??
+        repo.description ??
+        `# ${repo.name}\n\nNo README available for this project.`,
       ...parsed.data,
     };
   } catch (error) {

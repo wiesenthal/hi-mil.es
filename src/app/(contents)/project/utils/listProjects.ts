@@ -30,7 +30,7 @@ export async function listProjects() {
 
         return {
           slug: repo.name,
-          content: repo.description || "",
+          content: repo.description ?? "",
           ...parsed.data,
         };
       })
