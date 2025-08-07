@@ -30,6 +30,7 @@ export default async function Blog({
                       language={match[1]}
                       style={oneLight}
                     >
+                      {/* eslint-disable-next-line @typescript-eslint/no-base-to-string */}
                       {String(children).replace(/\n$/, "")}
                     </SyntaxHighlighter>
                   ) : (

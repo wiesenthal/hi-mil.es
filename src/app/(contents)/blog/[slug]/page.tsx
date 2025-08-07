@@ -19,13 +19,13 @@ export default async function Blog({
 
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
-        <div className="mx-auto flex w-full flex-grow flex-col relative">
-          <LikeButton 
-            contentType="blog" 
+        <div className="relative mx-auto flex w-full flex-grow flex-col">
+          <LikeButton
+            contentType="blog"
             contentSlug={slug}
-            className="absolute top-0 left-0 z-10"
+            className="absolute left-0 top-0 z-10"
           />
-          <div className="markdown prose prose-invert lg:prose-xl animate-fade-in max-w-none">
+          <div className="markdown prose prose-invert lg:prose-xl max-w-none animate-fade-in">
             <ReactMarkdown
               components={{
                 code({ children, className, ...rest }) {
@@ -36,6 +36,7 @@ export default async function Blog({
                       language={match[1]}
                       style={oneLight}
                     >
+                      {/* eslint-disable-next-line @typescript-eslint/no-base-to-string */}
                       {String(children).replace(/\n$/, "")}
                     </SyntaxHighlighter>
                   ) : (
@@ -60,7 +61,7 @@ export default async function Blog({
             </ReactMarkdown>
           </div>
           <div className="flex-grow" />
-          <div className="flex flex-row items-center justify-between gap-2 max-md:justify-center animate-fade-in">
+          <div className="flex animate-fade-in flex-row items-center justify-between gap-2 max-md:justify-center">
             <p className="flex-1 flex-grow text-sm font-light max-md:hidden">
               Created at:{" "}
               {createdAt.toLocaleDateString("en-US", {
