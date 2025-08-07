@@ -3,6 +3,12 @@ import { listBlogs } from "../utils/listBlogs";
 import { NavLink } from "~/app/components/NavLink";
 import { dashNameToSentence } from "~/utils/lambdas/dashNameToSentence";
 
+export const metadata = {
+  title: "Blogs",
+  description: "hi-mil.es",
+  applicationName: "hi-mil.es",
+};
+
 export default async function BlogList() {
   const blogs = await listBlogs();
 
@@ -10,7 +16,7 @@ export default async function BlogList() {
     <div className="mx-auto flex h-full flex-col gap-8 p-4">
       <div className="flex animate-fade-in flex-col items-center justify-center">
         <h1 className="text-4xl font-light">Blogs</h1>
-        <div className="text-xs font-light text-center tracking-tighter">
+        <div className="text-center text-xs font-light tracking-tighter">
           Pure Miles Generated Content
         </div>
       </div>

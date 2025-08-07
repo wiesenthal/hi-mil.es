@@ -5,8 +5,20 @@ import { NavLink } from "~/app/components/NavLink";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { PrettyLink } from "~/app/components/PrettyLink";
+import type { Metadata } from "next";
 
 export const dynamic = "force-static";
+
+export async function generateMetadata({
+  params: { slug },
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  return {
+    title: slug,
+    description: "hi-mil.es - project",
+  };
+}
 
 export default async function Project({
   params: { slug },

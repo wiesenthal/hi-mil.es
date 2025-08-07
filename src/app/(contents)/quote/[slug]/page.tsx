@@ -5,10 +5,25 @@ import { NavLink } from "~/app/components/NavLink";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { PrettyLink } from "~/app/components/PrettyLink";
+import type { Metadata } from "next";
 
 export const dynamic = "force-static";
 
-export default async function Blog({
+export async function generateMetadata({
+  params: { slug },
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { content, author } = (await readQuote(slug))!;
+  return {
+    title: `Quote by ${author}`,
+    description:
+      content.split("\n")[0]?.substring(0, 160) ?? "A meaningful quote",
+    applicationName: "hi-mil.es",
+  };
+}
+
+export default async function Quote({
   params: { slug },
 }: {
   params: { slug: string };

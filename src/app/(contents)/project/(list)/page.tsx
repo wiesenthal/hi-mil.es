@@ -2,6 +2,12 @@ import { PrettyLink } from "~/app/components/PrettyLink";
 import { listProjects } from "../utils/listProjects";
 import { NavLink } from "~/app/components/NavLink";
 
+export const metadata = {
+  title: "Projects",
+  description: "hi-mil.es",
+  applicationName: "hi-mil.es",
+};
+
 export default async function ProjectList() {
   const projects = await listProjects();
 
@@ -35,7 +41,7 @@ export default async function ProjectList() {
                 <PrettyLink
                   href={project.html_url}
                   target="_blank"
-                  className="absolute hidden md:block -right-20 top-1/2 -translate-y-1/2 rounded px-2 py-1 text-xs font-light transition-colors"
+                  className="absolute -right-20 top-1/2 hidden -translate-y-1/2 rounded px-2 py-1 text-xs font-light transition-colors md:block"
                 >
                   GitHub →
                 </PrettyLink>

@@ -6,8 +6,21 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { PrettyLink } from "~/app/components/PrettyLink";
 import LikeButton from "~/app/components/LikeButton";
+import type { Metadata } from "next";
+import { dashNameToSentence } from "~/utils/lambdas/dashNameToSentence";
 
 export const dynamic = "force-static";
+
+export async function generateMetadata({
+  params: { slug },
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  return {
+    title: dashNameToSentence(slug),
+    description: "hi-mil.es",
+  };
+}
 
 export default async function Blog({
   params: { slug },
