@@ -81,7 +81,7 @@ export function LikeButton({
     <button
       onClick={handleToggleLike}
       disabled={!userId || isLoading}
-      className={`transform-origin-center flex w-4 items-center gap-1 text-sm transition-all duration-150 ${
+      className={`transform-origin-center flex w-9 items-center gap-1 text-sm transition-all duration-150 ${
         userId ? "cursor-pointer" : "cursor-not-allowed opacity-60"
       } ${isLoading ? "animate-heart-beat" : ""} ${className}`}
       title={

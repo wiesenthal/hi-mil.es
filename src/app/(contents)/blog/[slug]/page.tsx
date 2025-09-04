@@ -32,12 +32,12 @@ export default async function Blog({
 
     return (
       <div className="flex size-full flex-col overflow-y-auto p-4">
+        <LikeButton
+          contentType="blog"
+          contentSlug={slug}
+          className="absolute right-0 top-0 z-10"
+        />
         <div className="relative mx-auto flex w-full flex-grow flex-col">
-          <LikeButton
-            contentType="blog"
-            contentSlug={slug}
-            className="absolute left-0 top-0 z-10"
-          />
           <div className="markdown prose prose-invert lg:prose-xl max-w-none animate-fade-in">
             <ReactMarkdown
               components={{
