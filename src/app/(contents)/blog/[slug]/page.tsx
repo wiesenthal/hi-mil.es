@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { readBlog } from "../utils/readBlog";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import { NavLink } from "~/app/components/NavLink";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -40,6 +41,7 @@ export default async function Blog({
         <div className="relative mx-auto flex w-full flex-grow flex-col">
           <div className="markdown prose prose-invert lg:prose-xl max-w-none animate-fade-in">
             <ReactMarkdown
+              rehypePlugins={[rehypeRaw]}
               components={{
                 code({ children, className, ...rest }) {
                   const match = /language-(\w+)/.exec(className ?? "");
