@@ -17,7 +17,7 @@ export default async function BlogList() {
       <div className="flex animate-fade-in flex-col items-center justify-center">
         <h1 className="text-4xl font-light">Blogs</h1>
         <div className="text-center text-xs font-light tracking-tighter">
-          Pure Miles Generated Content
+          100% human made
         </div>
       </div>
       <ul className="flex animate-fade-in-2 flex-col gap-2">

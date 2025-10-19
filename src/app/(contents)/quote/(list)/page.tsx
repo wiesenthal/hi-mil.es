@@ -16,9 +16,9 @@ export default async function QuoteList() {
   return (
     <div className="mx-auto flex h-full flex-col gap-8 p-4">
       <div className="flex animate-fade-in flex-col items-center justify-center">
-        <h1 className="text-4xl font-light">Quotes ~ Thoughts ~ Poems</h1>
+        <h1 className="text-4xl font-light">Quotes</h1>
         <div className="text-center text-xs font-light tracking-tighter">
-          Ideas I Live With
+          and thoughts and poems
         </div>
       </div>
       <ul className="flex max-h-full w-full animate-fade-in-2 flex-col gap-8 overflow-y-auto">
