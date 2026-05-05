@@ -1,7 +1,6 @@
 ---
 createdAt: 2025-06-11
 updatedAt: 2025-07-31
-symbol: 🩵
 ---
 
 # Intelligence is Good

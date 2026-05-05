@@ -19,15 +19,20 @@ export default async function ProjectList() {
           From GitHub: wiesenthal
         </div>
         <div className="mt-2 max-w-md text-center text-xs font-light tracking-tighter text-gray-500">
-          ⚠️ This site is under construction. For now, this section simply
+          This site is under construction. For now, this section simply
           clones my GitHub repositories.
         </div>
       </div>
-      <ul className="flex max-h-full w-full animate-fade-in-2 flex-col items-center gap-8 overflow-y-auto border-b">
+      <ul className="flex max-h-full w-fit mx-auto animate-fade-in-2 flex-col items-center gap-8 overflow-y-auto bg-white/20 rounded-full"
+        style={{
+          scrollbarWidth: "thin",
+          scrollbarColor: "#0000ee #fff"
+        }}
+      >
         {projects.map((project) => (
           <div
             key={project.slug}
-            className="relative flex w-full max-w-5xl cursor-auto flex-col justify-between gap-2 rounded from-white/10 via-white/30 via-20% to-white/50 p-3 shadow-inner drop-shadow"
+            className="relative flex w-full max-w-5xl cursor-auto flex-col justify-between gap-2 rounded "
           >
             <div className="flex flex-col items-center gap-2 text-center">
               <div className="relative flex items-center gap-4">
