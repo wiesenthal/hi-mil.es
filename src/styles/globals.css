@@ -12,9 +12,9 @@ body:has(.home-layout) {
 }
 
 body:has(.list-layout) {
-  background-color: var(--page-bg-color, #00eaff30);
+  background-color: var(--page-bg-color, #00eaff10);
 }
 
 body:has(.slug-layout) {
-  background-color: var(--page-bg-color, #00eaff60);
+  background-color: var(--page-bg-color, #00eaff20);
 }
