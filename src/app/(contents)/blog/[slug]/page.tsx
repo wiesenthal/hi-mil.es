@@ -38,8 +38,8 @@ export default async function Blog({
           contentSlug={slug}
           className="absolute right-0 top-0 z-10"
         />
-        <div className="relative mx-auto flex w-full flex-grow flex-col">
-          <div className="markdown prose prose-invert lg:prose-xl max-w-none animate-fade-in">
+        <div className="relative mx-auto flex w-full flex-grow flex-col max-w-6xl">
+          <div className="markdown prose prose-invert lg:prose-xl max-w-none animate-fade-in text-xl leading-relaxed">
             <ReactMarkdown
               rehypePlugins={[rehypeRaw]}
               components={{
