@@ -1,9 +1,11 @@
 ---
 createdAt: 2026-09-13
-updatedAt: 2026-09-13
+updatedAt: 2026-09-14
 ---
 
 # Agreement Culture
+
+##### *This writing plays with structured and unstructured thought to eat at a concept related to free expression.*
 
 Starting from a place of presence. Be centered. Any unresolved distractions and to-do’s are removed or parked in a satisfying will-get-done-later pile. 
 
