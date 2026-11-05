@@ -1,7 +1,9 @@
 import { sql } from "drizzle-orm";
 import {
+  boolean,
   foreignKey,
   integer,
+  jsonb,
   pgEnum,
   pgTable,
   primaryKey,
@@ -64,3 +66,25 @@ export const likes = pgTable(
     userContentUnique: unique().on(table.userId, table.contentType, table.contentSlug),
   }),
 );
+
+export const requests = pgTable(
+  "requests",
+  {
+    id: serial("id").primaryKey(),
+    method: text("method"),
+    url: text("url"),
+    headers: jsonb("headers"),
+    destination: text("destination"),
+    referrer: text("referrer"),
+    referrerPolicy: text("referrer_policy"),
+    mode: text("mode"),
+    credentials: text("credentials"),
+    cache: text("cache"),
+    redirect: text("redirect"),
+    integrity: text("integrity"),
+    keepalive: boolean("keepalive").default(false),
+    ip: text("ip"),
+    userAgent: text("user_agent"),
+    createdAt: timestamp("created_at").default(sql`now()`),
+  }
+)
