@@ -10,10 +10,11 @@ import type { Metadata } from "next";
 export const dynamic = "force-static";
 
 export async function generateMetadata({
-  params: { slug },
+  params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const { slug } = await params;
   return {
     title: slug,
     description: "hi-mil.es - project",
@@ -21,10 +22,11 @@ export async function generateMetadata({
 }
 
 export default async function Project({
-  params: { slug },
+  params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  const { slug } = await params;
   try {
     const project = await readProject(slug);
 

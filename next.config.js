@@ -14,6 +14,7 @@ const config = {
 
     return config;
   },
+  turbopack: {},
 };
 
 export default config;

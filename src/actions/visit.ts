@@ -1,7 +1,6 @@
 "use server";
 
 import { cookies, headers } from "next/headers";
-import { setCookie, getCookie } from "cookies-next";
 import { db } from "~/db";
 import { users, visits } from "~/db/schema";
 import type { User } from "~/db/types";
@@ -10,19 +9,16 @@ import { eq } from "drizzle-orm";
 const userIdCookie = "hi-miles-userId";
 
 export async function visit() {
-  const options = {
-    cookies,
-    sameSite: "true",
-    maxAge: 60 * 60 * 24 * 365,
-  };
-  const userId = getCookie(userIdCookie, options);
+  const cookiesList = await cookies();
+  const userId = cookiesList.get(userIdCookie)?.value;
 
-  const forwardedFor = headers().get("x-forwarded-for");
+  const headersList = await headers();
+  const forwardedFor = headersList.get("x-forwarded-for");
   const ip = forwardedFor
     ? forwardedFor.split(",")[0]?.trim()
-    : headers().get("x-real-ip")?.trim();
+    : headersList.get("x-real-ip")?.trim();
 
-  const url = headers().get("referer");
+  const url = headersList.get("referer");
 
   let user: User | undefined;
   if (userId)
@@ -44,7 +40,11 @@ export async function visit() {
 
   if (!visit) throw new Error("Failed to create visit");
 
-  setCookie(userIdCookie, user.id, options);
+  cookiesList.set(userIdCookie, String(user.id), {
+    sameSite: "lax",
+    maxAge: 60 * 60 * 24 * 365,
+  });
+
   return {
     visitId: visit.id,
     userId: user.id,

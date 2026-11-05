@@ -13,10 +13,11 @@ import { dashNameToSentence } from "~/utils/lambdas/dashNameToSentence";
 export const dynamic = "force-static";
 
 export async function generateMetadata({
-  params: { slug },
+  params
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const { slug } = await params;
   return {
     title: dashNameToSentence(slug),
     description: "hi-mil.es",
@@ -24,10 +25,11 @@ export async function generateMetadata({
 }
 
 export default async function Blog({
-  params: { slug },
+  params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  const { slug } = await params;
   try {
     const { content, createdAt, updatedAt } = (await readBlog(slug))!;
 
