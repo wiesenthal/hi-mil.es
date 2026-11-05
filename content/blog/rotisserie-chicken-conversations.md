@@ -42,7 +42,7 @@ I hope these examples elucidate that not all meat is equally balanced or desirea
 Protein and fat are the next natural division of meat. Proteins are the essential building blocks of the information. Fat is the excess, the detail which can be unnecessary, but satisfying. These properties separate a history class from a history podcast. Lecture content is designed to be lean. But information stripped down to only the essentials is damn dry. Some marbling of fat keeps the audience engaged.  
 ### Juice  
 
-I mentioned juice without explaining what it is in the meat section. I juice-droped. To be honest, I don't really know what it is. Is it blood? (no). I've heard the terms hemoglobin, myoglobin; I don't know. On its own, pretty distateful. But, in context we all love it deep down. And, the dose makes the poison.  
+I mentioned juice without explaining what it is in the meat section. I juice-dropped. To be honest, I don't really know what it is. Is it blood? (no). I've heard the terms hemoglobin, myoglobin; I don't know. On its own, pretty distateful. But, in context we all love it deep down. And, the dose makes the poison.  
 The phrase juicy gossip is not a coincidence. It's not nutritious, it's often devoid of substance or bearing on the truth.
 
 ### Bone
